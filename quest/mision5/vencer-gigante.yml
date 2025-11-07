@@ -1,0 +1,30 @@
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 1
+    names:
+    - "Orc_Giant"
+
+display:
+  name: "&3Vence al Guardián Gigante"
+  lore-normal:
+    - "&7Un Orco Gigante custodia a Olrik."
+    - "&7Derrota a la bestia para poder liberar"
+    - "&7al explorador y descubrir qué sabe."
+  lore-started:
+    - "&7Objetivo:"
+    - "&7 Mata al Orco Gigante."
+
+  type: "iron_axe"
+
+rewards:
+  - "quest admin moddata start {player} volver-con-mago"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

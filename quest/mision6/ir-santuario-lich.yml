@@ -1,0 +1,31 @@
+tasks:
+  position:
+    type: "position"
+    x: -556
+    y: 94
+    z: -556
+    world: nuevo_spawn
+    distance-padding: 70
+
+display:
+  name: "&5Ve al Santuario Olvidado"
+  lore-normal:
+    - "&7La derrota del Rey Orco revela una verdad más oscura."
+    - "&7No era más que una marioneta. El verdadero mal"
+    - "&7se esconde en un santuario nigromántico."
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -556 Y= 94 Z= -556"
+  type: "netherite_boots"
+
+rewards:
+  - "quest admin moddata start {player} matar-lich-debil"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

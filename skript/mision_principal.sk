@@ -1,0 +1,129 @@
+# mision_principal.sk
+
+on script load:
+    # Lista de misiones disponibles (ejemplo)
+    set {misiones::*} to "mision1", "completar_mision1", "mision2", "completar_mision2", "mision3", "completar_mision3", "mision4", "completar_mision4", "mision5", "completar_mision5", "mision6", "completar_mision6"
+    # add "otra_mision" to {misiones::*}  # Si quieres añadir más
+
+command /mision_principal <offlineplayer>:
+    permission: mision.admin
+    trigger:
+        if arg-1 is online:
+            send "&6--- Progreso de &e%arg-1% &6---" to player
+            if {misiones.sombras_eldrasheim.%arg-1%} is "completada":
+                send "&a✔ Sombras sobre Eldrasheim"
+            else if {misiones.sombras_eldrasheim.%arg-1%} is "activa":
+                send "&e⏳ Sombras sobre Eldrasheim (en curso)"
+            else:
+                send "&7✖ Sombras sobre Eldrasheim (no iniciada)"
+
+            if {misiones.mensajero_perdido.%arg-1%} is "completada":
+                send "&a✔ El Mensajero Perdido"
+            else if {misiones.mensajero_perdido.%arg-1%} is "activa":
+                send "&e⏳ El Mensajero Perdido (en curso)"
+            else:
+                send "&7✖ El Mensajero Perdido (no iniciada)"
+
+            if {misiones.sello_roto.%arg-1%} is "completada":
+                send "&a✔ El Sello Roto"
+            else if {misiones.sello_roto.%arg-1%} is "activa":
+                send "&e⏳ El Sello Roto (en curso)"
+            else:
+                send "&7✖ El Sello Roto (no iniciada)"
+        else:
+            send "&cEl jugador %arg-1% no está conectado."
+
+# Addon necesario: SkBee
+command /mision_principal_admin <offlineplayer> <text> <text>:
+    permission: mision.admin
+    usage: &cUso: /mision_principal_admin <jugador> [iniciar|completar|resetear] <nombre_mision>
+    trigger:
+        if arg-1 is not set:
+            send "&cUso: /mision_principal_admin <jugador> [iniciar|completar|resetear] <nombre_mision>" to player
+            stop
+
+        set {_p} to arg-1
+        set {_accion} to arg-2
+        set {_mision} to arg-3
+
+        if {_accion} is "iniciar":
+            set {misiones.%{_mision}%.%{_p}%} to "activa"
+            send "&aHas iniciado la misión &f%{_mision}% &apara &f%{_p}%."
+            execute console command "int start %{_mision}% %{_p}%"
+
+            
+        else if {_accion} is "completar":
+            set {misiones.%{_mision}%.%{_p}%} to "completada"
+            send "&aHas completado la misión &f%{_mision}% &apara &f%{_p}%."
+            # execute console command "int start %{_mision}% %{_p}%"
+            
+            
+        else if {_accion} is "resetear":
+            delete {misiones.%{_mision}%.%{_p}%}
+            send "&cHas reseteado la misión &f%{_mision}% &cpara &f%{_p}%."
+        else:
+            send "&cAcción desconocida. Usa: iniciar / completar / resetear."
+
+# Autocompletado con SkBee (corregido — sin usar arg-* en el evento)
+on tab complete of "/mision_principal_admin":
+    # Posición 1: Jugadores (sugerimos todos los jugadores online)
+    delete {_tmp_players::*}
+    loop all players:
+        add loop-player's name to {_tmp_players::*}
+    if {_tmp_players::*} is set:
+        set tab completions for position 1 to {_tmp_players::*}
+
+    # Posición 2: Acciones (iniciar, completar, resetear)
+    set tab completions for position 2 to "iniciar", "completar", "resetear"
+
+    # Posición 3: Nombre de la misión (lista dinámica)
+    delete {_misiones_disponibles::*}
+    loop {misiones::*}:
+        add loop-value to {_misiones_disponibles::*}
+
+    if {_misiones_disponibles::*} is set:
+        set tab completions for position 3 to {_misiones_disponibles::*}
+    else:
+        # Fallback por si no hay misiones registradas
+        set tab completions for position 3 to "sombras_eldrasheim", "mensajero_perdido", "sello_roto"
+        
+        
+        
+# -----------------------------------------------------
+# COMANDO AUTOMÁTICO DE PROGRESIÓN DE MISIONES
+# -----------------------------------------------------
+
+command /mision_siguiente_test <offlineplayer>:
+    permission: mision.admin
+    usage: &cUso: /mision_siguiente <jugador>
+    trigger:
+        set {_p} to arg-1
+
+        # Lista del orden de misiones
+        set {_orden::*} to "mision1", "completar_mision1", "mision2", "completar_mision2", "mision3", "completar_mision3"
+
+        # Si el jugador no tiene progreso, empieza desde el principio
+        if {progreso_mision.%{_p}%} is not set:
+            set {progreso_mision.%{_p}%} to 1
+
+        set {_paso} to {progreso_mision.%{_p}%}
+        set {_mision_actual} to {_orden::%{_paso}%}
+
+        if {_mision_actual} is not set:
+            send "&6El jugador &e%{_p}% &6ya ha completado todas las misiones." to player
+            stop
+
+        # Detectamos si es una misión normal o una de 'completar'
+        if {_mision_actual} starts with "completar_":
+            set {_accion} to "completar"
+        else:
+            set {_accion} to "iniciar"
+
+        # Ejecuta el comando desde consola
+        execute console command "mision_principal_admin %{_p}% %{_accion}% %{_mision_actual}%"
+
+        send "&a>> Ejecutando siguiente paso para &f%{_p}%&a: &f%{_mision_actual}% &7(%{_accion}%)" to player
+
+        # Avanza el progreso para la siguiente ejecución
+        add 1 to {progreso_mision.%{_p}%}
+

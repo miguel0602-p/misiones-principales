@@ -1,0 +1,555 @@
+prefix: "&8[&bInteracciones&8] "
+optionsFormat: "&6&l%number%. %text%"
+nameFormat: "%name% &f:"
+invalidOption: "&cUsa una opción válida."
+conversationEnded: "&8[&7Conversación terminada&8]"
+configReloaded: "&aConfiguraciones recargadas."
+noPermissions: "&cNo tienes permisos."
+commandEditError: "&cUsa: &7/interactions edit <conversation>"
+commandCreateError: "&cUsa: &7/interactions create <conversation>"
+commandDeleteError: "&cUsa: &7/interactions delete <conversation>"
+commandHelpNoValidPage: "&cEsa página no existe."
+commandResetPlayerError: "&cUsa: &7/interactions resetplayer <player> <conversation entity> (opcional)<dialogue>"
+commandResetPlayerErrorUser: "&cEse usuario no tiene datos almacenados."
+commandResetPlayerSuccess: "&aConversación &7%conversation% &areseteada para &e%player%&a."
+commandResetPlayerSuccessDialogue: "&aDiálogo &7%dialogue% &aen la conversación &7%conversation% &areseteado para &e%player%&a." 
+noConversation: "&cEsa entidad de conversación no existe."
+noConversationSpecific: "&cEse árbol de conversación para la entidad &7%name% &cno existe."
+conversationAlreadyExist: "&cEsa entidad de conversación ya existe."
+conversationCreated: "&aConversación &6%conversation% &acreada! Ahora puedes usar &7/interactions edit %conversation%"
+conversationDeleted: "&aConversación &6%conversation% &aeliminada!"
+mainInventoryTitle: "&4Creando Conversación"
+mainInventoryAddConversationName: "&2Agregar nueva Conversación"
+mainInventoryAddConversationLore:
+- "&7En una Conversación puedes añadir múltiples diálogos."
+- "&7Además, una conversación puede tener opciones para que"
+- "&7el jugador seleccione."
+mainInventoryConfigurationName: "&2Configuración"
+mainInventoryConfigurationLore:
+- "&7Aquí puedes modificar algunas opciones de esta"
+- "&7conversación."
+mainInventoryConversationItemName: '&6Conversación: &e%name%'
+mainInventoryConversationItemLore:
+- '&6Diálogos: &b%dialogues%'
+- '&6Opciones del jugador: &b%options%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+mainInventoryFirstConversationItemLore:
+- "&7&oEsta es la primera conversación que los jugadores"
+- "&7&otendrán al hablar con el NPC."
+mainInventoryConfigName: "&4Configuración actual: &7%name%"
+conversationInventoryAddDialogueName: "&2Agregar nuevo Diálogo"
+conversationInventoryAddDialogueLore:
+- "&7Haz clic para añadir un nuevo diálogo a esta"
+- "&7conversación."
+conversationInventoryAddOptionName: "&2Agregar nueva Opción de Jugador"
+conversationInventoryAddOptionLore:
+- "&7Los jugadores deberán elegir una opción para"
+- "&7continuar con la conversación."
+conversationInventoryDialogueItemName: '&6Diálogo: &e%name%'
+conversationInventoryDialogueItemLore:
+- '&6Texto:'
+- '%text%'
+- ''
+- '&6Tiempo: &b%time%'
+- '&6Acciones: &b%actions%'
+- '&6Diálogos condicionales: &b%conditional_dialogues%'
+- ''
+- '&6Al finalizar:'
+- '%finish%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+conversationInventoryRandomDialogueName: "&2Diálogo Aleatorio"
+conversationInventoryRandomDialogueLore:
+- "&7Si está activado, esta conversación seleccionará"
+- "&7un diálogo aleatorio."
+- ""
+- "&6Estado: &b%status%"
+conversationInventoryOptionsInDialogueName: "&2Opciones dentro del Diálogo"
+conversationInventoryOptionsInDialogueLore:
+  - "&7Si está activado, las opciones no se enviarán en el formato"
+  - "&7común sino que pueden añadirse como variables"
+  - "&7dentro del último diálogo de esta conversación."
+  - ""
+  - "&6Estado: &b%status%"
+  - ""
+  - "&6Requisitos para funcionar:"
+  - "&8-> El último diálogo contiene una variable %option_X% &7(%requirement_1%&7)"
+  - "&8-> El último diálogo tiene tiempo 0 &7(%requirement_2%&7)"
+conversationInventoryManageInterruptActionsName: "&2Administrar Acciones de Interrupción"
+conversationInventoryManageInterruptActionsLore:
+  - "&7Haz clic para gestionar las acciones de interrupción de este"
+  - "&7árbol de conversación. Estas acciones se ejecutarán si la"
+  - "&7conversación se detiene abruptamente."
+  - ""
+  - "&6Acciones actuales: &b%actions%"
+conversationInventoryAddInterruptActionName: "&2Agregar Acción de Interrupción"
+conversationInventoryAddInterruptActionLore:
+  - "&7Haz clic para añadir una nueva acción de interrupción"
+  - "&7para este árbol de conversación."
+inventoryConversationAddInterruptActionChat:
+  - "&a&lEscribe la nueva acción de interrupción para este árbol de conversación"
+  - "&7Lista de Acciones: &bhttps://ajneb97.gitbook.io/interactions/actions"
+  - "&7(O escribe 'back')"
+conversationInventoryFinishOption: "&fRedirigir a opciones desde: &e%conversation%"
+conversationInventoryFinishOption2: "&fRedirigir a otras opciones"
+conversationInventoryFinishConversation: "&fRedirigir a conversación: &e%conversation%"
+conversationInventoryFinishConversation2: "&fRedirigir a otra conversación"
+conversationInventoryFinishContinue: "&fContinuar con el siguiente diálogo"
+conversationInventoryFinishThisOptions: "&fMostrar opciones al jugador"
+conversationInventoryFinishNothing: "&fTerminar la conversación"
+conversationInventoryConversationName: "&4Conversación actual: &7%name%"
+conversationInventoryOptionItemName: '&6Opción: &e%name%'
+conversationInventoryOptionItemLore:
+- '&6Texto:'
+- '%text%'
+- ''
+- '&6Requisitos: &b%requirements%'
+- '&6Acciones: &b%actions%'
+- '&6Iniciar conversación: &b%conversation%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+dialogueInventoryDialogueName: "&4Diálogo actual: &7%name%"
+dialogueInventoryConfigurationName: "&2Configuración"
+dialogueInventoryConfigurationLore:
+- "&7Aquí puedes modificar algunas opciones de este"
+- "&7diálogo."
+dialogueInventoryAddLineName: "&2Agregar Línea de Texto"
+dialogueInventoryAddLineLore:
+- "&7Haz clic para añadir una nueva línea de texto para"
+- "&7este diálogo."
+dialogueInventorySetEndName: "&2Establecer Finalización"
+dialogueInventorySetEndLore:
+- "&7Qué ocurrirá cuando este diálogo"
+- "&7termine."
+- ""
+- "&6Actual:"
+- "%finish%"
+dialogueInventoryManageActionName: "&2Gestionar Acciones"
+dialogueInventoryManageActionLore:
+- "&7Haz clic para gestionar acciones de este"
+- "&7diálogo."
+- ""
+- "&6Acciones actuales: &b%actions%"
+dialogueInventoryManageLastActionName: "&2Gestionar Últimas Acciones"
+dialogueInventoryManageLastActionLore:
+- "&7Haz clic para gestionar las últimas acciones de este"
+- "&7diálogo."
+- ""
+- "&6Últimas acciones actuales: &b%actions%"
+dialogueInventoryAddConditionalDialogueName: "&2Gestionar Diálogos Condicionales"
+dialogueInventoryAddConditionalDialogueLore:
+- "&7Un diálogo condicional es un reemplazo para"
+- "&7este diálogo. Se enviará al jugador"
+- "&cSOLO &7si se cumplen ciertas condiciones."
+- ""
+- "&6Diálogos condicionales actuales: &b%conditional_dialogues%"
+dialogueInventoryLineItemName: '&6Línea &e%number%'
+dialogueInventoryLineItemLore:
+- '&6Texto:'
+- '%text%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+dialogueInventoryTimeName: "&2Establecer Tiempo"
+dialogueInventoryTimeLore:
+- "&7El tiempo que el jugador tiene para leer este diálogo"
+- "&7antes de que el siguiente diálogo aparezca en el chat."
+- ""
+- "&6Tiempo actual: &b%time%"
+- ""
+- "&a&lCLICK IZQUIERDO para aumentar"
+- "&c&lCLICK DERECHO para disminuir"
+dialogueInventoryTimeWarningLore:
+- "&7El tiempo que el jugador tiene para leer este diálogo"
+- "&7antes de que el siguiente diálogo aparezca en el chat."
+- ""
+- "&6Tiempo actual: &b%time%"
+- "&c¡ADVERTENCIA!"
+- "&7Si pones el tiempo a -1 significa que el siguiente"
+- "&7diálogo NO CONTINUARÁ a menos que añadas un botón SIGUIENTE que el jugador necesite pulsar."
+- "&7Para añadir este botón, simplemente coloca la variable &e%next% &7al final del diálogo."
+- ""
+- "&a&lCLICK IZQUIERDO para aumentar"
+- "&c&lCLICK DERECHO para disminuir"
+dialogueInventoryTimeWarningLore2:
+- "&7El tiempo que el jugador tiene para leer este diálogo"
+- "&7antes de que el siguiente diálogo aparezca en el chat."
+- ""
+- "&6Tiempo actual: &b%time%"
+- "&c¡ADVERTENCIA!"
+- "&7Si pones el tiempo a 0 significa que el siguiente"
+- "&7diálogo SE MOSTRARÁ INSTANTÁNEAMENTE después de este."
+- "&7Útil cuando quieres mostrar opciones al instante"
+- "&7después de un diálogo."
+- ""
+- "&a&lCLICK IZQUIERDO para aumentar"
+- "&c&lCLICK DERECHO para disminuir"
+dialogueInventoryEntityNameName: "&2Mostrar Nombre de la Entidad"
+dialogueInventoryEntityNameLore:
+- "&7Si está activado, el nombre de la entidad se mostrará"
+- "&7antes del diálogo."
+- ""
+- "&6Estado: &b%status%"
+dialogueInventorySaveName: "&2Guardar Progreso del Diálogo"
+dialogueInventorySaveLore:
+- "&7Si está activado, el diálogo se guardará para"
+- "&7el jugador. Esto tiene múltiples usos cuando quieres"
+- "&7usar condiciones en otras conversaciones para determinar si"
+- "&7el jugador ha alcanzado este diálogo o no."
+- ""
+- "&6Estado: &b%status%"
+dialogueInventoryActionsAfterName: "&2Acciones después del Diálogo"
+dialogueInventoryActionsAfterLore:
+- "&7Si está activado, las acciones definidas se"
+- "&7ejecutarán cuando el diálogo se complete."
+- ""
+- "&6Estado: &b%status%"
+dialogueInventoryFinish1Lore:
+- "&7Si esta opción está activada, al finalizar"
+- "&7este diálogo, iniciará el siguiente diálogo de ESTA"
+- "&7conversación."
+- ""
+- "&6Estado: &b%status%"
+dialogueInventoryFinish2Lore:
+- "&7Si esta opción está activada, al finalizar"
+- "&7este diálogo, se enviarán las opciones del jugador de ESTA"
+- "&7conversación."
+- ""
+- "&6Estado: &b%status%"
+dialogueInventoryFinish3Lore:
+- "&7Si esta opción está activada, al finalizar"
+- "&7este diálogo, se enviarán las opciones del jugador de OTRA"
+- "&7conversación."
+- ""
+- "&6Estado: &b%status%"
+- "&6Conversación: &b%conversation%"
+dialogueInventoryFinish4Lore:
+- "&7Si esta opción está activada, al finalizar"
+- "&7este diálogo, se iniciará el primer diálogo de OTRA"
+- "&7conversación."
+- ""
+- "&6Estado: &b%status%"
+- "&6Conversación: &b%conversation%"
+dialogueInventoryFinish5Lore:
+- "&7Si esta opción está activada, al finalizar"
+- "&7este diálogo, la conversación terminará."
+- ""
+- "&6Estado: &b%status%"
+inventoriesConversationNone: "&7Ninguno"
+inventoriesBackItemName: "&7Atrás"
+inventoriesStatusEnabled: "&aACTIVADO"
+inventoriesStatusDisabled: "&cDESACTIVADO"
+inventoryAddLineChat:
+- "&a&lEscribe la nueva línea para este diálogo"
+- "&7(O escribe 'back')"
+inventoryAddLineChatSuccess: "&a¡Línea añadida!"
+inventoryEditLineChatSuccess: "&a¡Línea modificada!"
+inventoryDialogueFinishContinueError: "&c¡No hay más diálogos con los que continuar!"
+inventoryDialogueFinishOptionsError: "&c¡No hay opciones definidas para esta conversación!"
+inventoryDialogueFinishEndError: "&c¡Hay opciones definidas para esta conversación. Elimínalas primero!"
+inventoryDialogueFinishEndError2: "&c¡Éste debe ser el diálogo final!"
+inventoryFinishOptionsChat:
+- "&a&lEscribe el nombre de la conversación del jugador"
+- "&a&lopciones a redirigir"
+- "&6Posibles Opciones: &e%options%"
+- "&7(O escribe 'back')"
+inventoryFinishConversationChat:
+- "&a&lEscribe el nombre de la conversación a la que"
+- "&a&lredirigir"
+- "&6Posibles Conversaciones: &e%conversations%"
+- "&7(O escribe 'back')"
+inventoryFinishOptionsChatError: "&cDebes escribir una conversación válida con opciones!"
+inventoryFinishConversationChatError: "&cDebes escribir una conversación válida!"
+dialogueInventoryAddActionName: "&2Agregar Acción"
+dialogueInventoryAddActionLore:
+- "&7Haz clic para añadir una nueva acción para"
+- "&7este diálogo."
+dialogueInventoryActionItemName: '&6Acción &e%number%'
+dialogueInventoryActionItemLore:
+- '&6Acción:'
+- '&7%action%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+inventoryAddActionChat:
+- "&a&lEscribe la nueva acción para este diálogo"
+- "&7Lista de Acciones: &bhttps://ajneb97.gitbook.io/interactions/actions"
+- "&7(O escribe 'back')"
+inventoryAddActionChatSuccess: "&a¡Acción añadida!"
+inventoryEditActionChatSuccess: "&a¡Acción modificada!"
+optionInventoryOptionName: "&4Opción actual: &7%name%"
+optionInventoryStartConversationName: "&2Iniciar Conversación"
+optionInventoryStartConversationLore:
+- "&7¿Qué conversación debe iniciar cuando"
+- "&7el jugador selecciona esta opción?"
+- ""
+- "&6Actual:"
+- "&f%conversation%"
+optionInventoryTextItemName: '&6Texto de la Opción'
+optionInventoryTextItemLore:
+- '&6Opción:'
+- '%text%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+optionInventoryManageRequirementsName: "&2Gestionar Requisitos"
+optionInventoryManageRequirementsLore:
+- "&7Haz clic para gestionar requisitos para que esta"
+- "&7opción aparezca."
+- ""
+- "&6Requisitos actuales: &b%requirements%"
+optionInventoryManageActionName: "&2Gestionar Acciones"
+optionInventoryManageActionLore:
+- "&7Haz clic para gestionar acciones para esta"
+- "&7opción."
+- ""
+- "&6Acciones actuales: &b%actions%"
+optionInventoryAddActionName: "&2Agregar Acción"
+optionInventoryAddActionLore:
+- "&7Haz clic para añadir una nueva acción para"
+- "&7esta opción."
+inventoryOptionAddActionChat:
+- "&a&lEscribe la nueva acción para esta opción"
+- "&7Lista de Acciones: &bhttps://ajneb97.gitbook.io/interactions/actions"
+- "&7(O escribe 'back')"
+inventoryAddOptionTextChat:
+- "&a&lEscribe el texto para esta opción"
+- "&7(O escribe 'back')"
+inventoryAddOptionTextChatSuccess: "&a¡Texto de opción modificado!"
+inventorySetConversationChat:
+- "&a&lEscribe la conversación que debe iniciar cuando"
+- "&a&lel jugador seleccione esta opción"
+- "&6Posibles Conversaciones: &e%conversations%"
+- "&7(O escribe 'back')"
+optionInventoryAddRequirementName: "&2Agregar Requisito"
+optionInventoryAddRequirementLore:
+- "&7Haz clic para añadir un nuevo requisito para"
+- "&7esta opción."
+optionInventoryRequirementItemName: '&6Requisito &e%number%'
+optionInventoryRequirementItemLore:
+- '&6Requisito:'
+- '&7%requirement%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+optionAddRequirementChat:
+- "&a&lEscribe el nuevo requisito para esta opción"
+- "&a&lpara que aparezca."
+- "&7Lista de Requisitos: &bhttps://ajneb97.gitbook.io/interactions/requirements"
+- "&7(O escribe 'back')"
+optionAddRequirementChatSuccess: "&a¡Requisito añadido!"
+optionEditRequirementChatSuccess: "&a¡Requisito modificado!"
+confirmationInventoryYesItemName: "&a&lSÍ"
+confirmationInventoryNoItemName: "&c&lNO"
+confirmationInventoryDialogueMainItemName: "&6&lELIMINAR DIÁLOGO"
+confirmationInventoryDialogueMainItemLore:
+- "&c¿Seguro que quieres eliminar"
+- "&ceste diálogo?"
+- ""
+- "&6Diálogo: &7%dialogue%"
+dialogueRemoved: "&aDiálogo &7%dialogue% &aeliminado!"
+confirmationInventoryOptionMainItemName: "&6&lELIMINAR OPCIÓN"
+confirmationInventoryOptionMainItemLore:
+- "&c¿Seguro que quieres eliminar"
+- "&cesta opción?"
+- ""
+- "&6Opción: &7%option%"
+optionRemoved: "&aOpción &7%option% &aeliminada!"
+confirmationInventoryConversationMainItemName: "&6&lELIMINAR CONVERSACIÓN"
+confirmationInventoryConversationMainItemLore:
+- "&c¿Seguro que quieres eliminar"
+- "&cesta conversación?"
+- ""
+- "&6Conversación: &7%conversation%"
+conversationRemoved: "&aConversación &7%conversation% &aeliminada!"
+mainInventoryConfigAddStartName: "&2Agregar Inicio"
+mainInventoryConfigAddStartLore:
+- "&7Haz clic para añadir CÓMO debe empezar la conversación."
+mainInventoryConfigStartItemName: '&6Inicio &e%number%'
+mainInventoryConfigStartItemLore:
+- '&6Inicio:'
+- '&7%start%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+addStartChatSuccess: "&a¡Método de inicio añadido!"
+editStartChatSuccess: "&a¡Método de inicio modificado!"
+inventoryAddStartChat:
+- "&a&lEscribe la nueva forma de iniciar la conversación"
+- "&7Ejemplos:"
+- "&bZOMBIE named Zombie Guard"
+- "&bNPC with id 17"
+- ""
+- "&7(O escribe 'back')"
+mainInventoryConfigSetNameName: "&2Establecer Nombre"
+mainInventoryConfigSetNameLore:
+- "&7Establece el nombre del NPC (o entidad)"
+- "&7que habla en la conversación."
+- ""
+- "&6Nombre actual: %name%"
+inventoryConfigSetNameChat:
+- "&a&lEscribe el nuevo nombre del NPC (o entidad)"
+- "&7(O escribe 'back')"
+setConfigNameChatSuccess: "&aNombre establecido correctamente."
+mainInventoryBlockMovementName: "&2Bloquear Movimiento"
+mainInventoryBlockMovementLore:
+- "&7Si está activado, el jugador no podrá"
+- "&7moverse mientras esté en esta conversación."
+- ""
+- "&6Estado: &b%status%"
+mainInventoryStartRadiusName: "&2Radio de Inicio"
+mainInventoryStartRadiusLore:
+- "&7El radio de bloques que el jugador debe estar"
+- "&7cerca del NPC para iniciar automáticamente"
+- "&7la conversación. Si no quieres esta"
+- "&7opción, pon el radio a 0."
+- ""
+- "&6Radio actual: &b%radius%"
+- ""
+- "&a&lCLICK IZQUIERDO para aumentar"
+- "&c&lCLICK DERECHO para disminuir"
+mainInventoryEndRadiusName: "&2Radio de Finalización"
+mainInventoryEndRadiusLore:
+- "&7El radio de bloques que el jugador debe"
+- "&7alejarse del NPC para terminar automáticamente"
+- "&7la conversación. Si no quieres esta"
+- "&7opción, pon el radio a 0."
+- ""
+- "&6Radio actual: &b%radius%"
+- ""
+- "&a&lCLICK IZQUIERDO para aumentar"
+- "&c&lCLICK DERECHO para disminuir"
+mainInventoryAdvancedConfigName: "&2Configuración Avanzada"
+mainInventoryAdvancedConfigLore:
+- "&7Aquí puedes modificar algunas opciones avanzadas"
+- "&7para esta conversación."
+mainInventorySlowEffectName: "&2Efecto de Lentitud"
+mainInventorySlowEffectLore:
+- "&7Cuando está activado, crea un"
+- "&7efecto de zoom al hablar con el NPC."
+- ""
+- "&6Estado: &b%status%"
+mainInventorySaveConversationProgressName: "&2Guardar Progreso de Conversación"
+mainInventorySaveConversationProgressLore:
+- "&7Cuando está activado, si el jugador abandona el"
+- "&7servidor o el servidor se cierra mientras habla"
+- "&7con un NPC, el progreso de la conversación"
+- "&7se guardará para la próxima vez que se conecte."
+- ""
+- "&6Estado: &b%status%"
+mainInventoryRequiresPermissionName: "&2Requiere Permiso"
+mainInventoryRequiresPermissionLore:
+- "&7Cuando está activado, los jugadores necesitarán el"
+- "&cinteractions.start.<conversation> &7permiso"
+- "&7para hablar con el NPC."
+- ""
+- "&6Estado: &b%status%"
+mainInventoryCanBeStartedOnAirName: "&2Puede Iniciarse en el Aire"
+mainInventoryCanBeStartedOnAirLore:
+  - "&7Cuando está activado, los jugadores podrán"
+  - "&7iniciar la conversación aunque no estén"
+  - "&7en el suelo."
+  - ""
+  - "&6Estado: &b%status%"
+mainInventoryCooldownName: "&2Tiempo de Reutilización"
+mainInventoryCooldownLore:
+- "&7Define la cantidad de segundos que el jugador debe"
+- "&7esperar antes de hablar con el NPC nuevamente."
+- ""
+- "&6Reutilización actual: &b%cooldown%s"
+mainInventorySetCooldownChat:
+- "&a&lEscribe el nuevo tiempo de reutilización en segundos"
+- "&7(O escribe 'back')"
+mainInventorySetCooldownChatSuccess: "&a¡Reutilización establecida!"
+invalidNumber: "&cDebes escribir un número válido."
+dialogueInventoryAddConditionalDialogueItemName: "&2Agregar Diálogo Condicional"
+dialogueInventoryAddConditionalDialogueItemLore:
+- "&7Haz clic para añadir un nuevo diálogo condicional"
+- "&7para este diálogo."
+dialogueInventoryConditionalDialogueItemName: '&6Diálogo Condicional: &e%name%'
+dialogueInventoryConditionalDialogueItemLore:
+- '&6Requiere: &b%requires%'
+- '&6Iniciar Conversación: &b%conversation%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+confirmationInventoryConditionalDialogueMainItemName: "&6&lELIMINAR DIÁLOGO CONDICIONAL"
+confirmationInventoryConditionalDialogueMainItemLore:
+- "&c¿Seguro que quieres eliminar"
+- "&ceste diálogo condicional?"
+- ""
+- "&6Diálogo condicional: &7%dialogue%"
+conditionaldDialogueRemoved: "&aDiálogo condicional &7%dialogue% &aeliminado!"
+conditionalDialogueInventoryDialogueName: "&4Diálogo condicional actual: &7%name%"
+conditionalDialogueInventoryAddRequirementName: "&2Agregar Requisito"
+conditionalDialogueInventoryAddRequirementLore:
+- "&7Haz clic para añadir un nuevo requisito para"
+- "&7este diálogo condicional."
+conditionalDialogueInventoryRequirementItemName: '&6Requisito &e%number%'
+conditionalDialogueInventoryRequirementItemLore:
+- '&6Requisito:'
+- '&7%requirement%'
+- ''
+- '&a&lCLICK IZQUIERDO para editar'
+- '&c&lCLICK DERECHO para eliminar'
+conditionalDialogueAddRequirementChat:
+- "&a&lEscribe el nuevo requisito para este diálogo condicional"
+- "&a&lpara que aparezca."
+- "&7Lista de Requisitos: &bhttps://ajneb97.gitbook.io/interactions/requirements"
+- "&7(O escribe 'back')"
+conditionalDialogueAddRequirementChatSuccess: "&a¡Requisito añadido!"
+conditionalDialogueEditRequirementChatSuccess: "&a¡Requisito modificado!"
+conditionalDialogueInventoryStartConversationName: "&2Iniciar Conversación"
+conditionalDialogueInventoryStartConversationLore:
+- "&7¿Qué conversación debe iniciarse cuando los"
+- "&7requisitos de este diálogo condicional se cumplan?"
+- ""
+- "&6Actual:"
+- "&f%conversation%"
+conditionalDialogueInventorySetConversationChat:
+- "&a&lEscribe la conversación que debe iniciarse cuando"
+- "&a&lse cumplan los requisitos de este diálogo condicional."
+- "&6Posibles Conversaciones: &e%conversations%"
+- "&7(O escribe 'back')"
+interactEntityConversationError: "&cEsta conversación no puede iniciarse ya que tiene errores, contacta a un administrador."
+playerChatError: "&cNo puedes chatear mientras estás en una conversación."
+playerCommandError: "&cNo puedes usar comandos mientras estás en una conversación."
+bossBarTitleConversation: "&eActualmente en una conversación con: %name%"
+actionBarTitleConversation: "&eActualmente en una conversación con: %name%"
+bossBarTitleSelectOption: "&eActualmente en una conversación con: %name% &8- &bSelecciona una opción!"
+actionBarTitleSelectOption: "&eActualmente en una conversación con: %name% &8- &bSelecciona una opción!"
+clickableOptionHover: "&aHaz clic para seleccionar esta opción! &8(&b%option%&8)"
+notInConversation: "&cNo estás en una conversación."
+conversationsListError: "&cNo hay conversaciones creadas."
+conversationsListTitle: "&6&m        &a LISTA DE CONVERSACIONES &6&m        " 
+conversationsListItem: "&e%number%. &c%conversation%"
+conversationsListItemHover:
+- "&aHaz clic para editar."
+nextDialogueText: "&8[&aSiguiente➜&8]"
+nextDialogueHover: "&eHaz clic para continuar con la conversación."
+conversationPermissionsError: "&cNo tienes permisos para iniciar esta conversación!"
+commandStartError: "&cUsa: &7/interactions start <conversation> <player> &co &7/interactions start <conversation> <player> <x> <y> <z> <world>"
+commandStartLocationException: "&cLa ubicación no es válida."
+playerNotOnline: "&cEse jugador no está en línea."
+commandStartConversationStarted: "&aConversación &7%conversation% &ainiciada correctamente para &7%player%&a."
+commandStartConversationStartedForAll: "&aConversación &7%conversation% &ainiciada correctamente para todos los jugadores."
+playerInventoryInteractError: "&cNo puedes interactuar con tu inventario mientras estás en una conversación."
+selectableOptionsFormatNormal: "      &6&l%number%. %text%"
+selectableOptionsFormatSelected: "   &7» &6&l%number%. &f&n%text%&8 (&7AGACHARSE para usar&8)"
+conversationCooldownError: "&cDebes esperar &7%time% &cantes de hablar nuevamente con este NPC."
+errorStartConversationCurrentlyEditing: "&cActualmente estás editando una conversación."
+optionsMainFormat:
+- "%options%"
+commandStopError: "&cUsa: &7/interactions stop <player>"
+playerNotInConversation: "&cEse jugador no está en una conversación."
+commandStopCorrect: "&aConversación actual detenida para &7%player%&a."
+commandStopCorrectForAll: "&aConversaciones actuales detenidas para todos los jugadores."
+commandInfluenceError: "&cUsa: &7/interactions influence set/add/remove <player> <conversation_entity> <value>"
+influenceAddCorrect: "&aAñadida &e%influence% &ainfluencia a la entidad &e%conversation% &apara el jugador &e%player%&a."
+influenceRemoveCorrect: "&aEliminada &e%influence% &ainfluencia de la entidad &e%conversation% &apara el jugador &e%player%&a."
+influenceSetCorrect: "&aInfluencia establecida a &e%influence% &aen la entidad &e%conversation% &apara el jugador &e%player%&a."
+errorStartConversationInTheAir: "&c¡No puedes iniciar una conversación estando en el aire!"
+errorStartConversationAlreadyMounted: "&c¡No puedes iniciar una conversación estando montado!"

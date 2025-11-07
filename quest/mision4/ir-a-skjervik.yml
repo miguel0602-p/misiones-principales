@@ -1,0 +1,37 @@
+tasks:
+  position:
+    type: "position"
+    x: -384                                    # x position
+    y: 86                                  # y position
+    z: -1686                                     # z position
+    world: nuevo_spawn                          # name of world
+    distance-padding: 50                  # (OPTIONAL) padding zone in meters/blocks - 
+
+
+display:
+  name: "&bVe al pueblito Skjervik"
+  lore-normal:
+    - "&7Dirígete al antiguo pueblito de Skjervik."
+    - "&7Se rumorea que ha sido invadido por orcos."
+    - "&7Encuentra el camino hacia sus ruinas."
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -384 Y= 86 Z= -1686"
+
+  type: "leather_boots"
+
+rewards:
+  - "quest admin moddata start {player} matar-orcos-skjervik"
+
+startstring:
+  - "&eHas comenzado la misión &bEl Asedio de Skjervik&e. ¡Buena suerte!"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1
+# ...existing code...

@@ -1,0 +1,35 @@
+# ...existing code...
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 15                             # cantidad de mobs a matar
+    names:
+    - "Orc_Warrior"                          # nombre interno del mob (no el display)
+    - "Orc_Archer"
+    - "Goblin_Archer" 
+    - "Goblin_Warrior" 
+
+
+display:
+  name: "&bLibera el antiguo establo de las nieves"
+  lore-normal:
+    - "&7Ve al antiguo establo de las nieves"
+    - "&7Según sales de la ciudad,"
+    - "&7sube hacia la nieve y allí lo encontrarás"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= 132 Y= 104 Z= -883"
+
+  type: "wooden_sword"
+
+rewards:
+  - "mision_principal_admin {player} completar mision1"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

@@ -1,0 +1,35 @@
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 30                             # cantidad de mobs a matar
+    names:
+    - "Orc_Warrior"                          # nombres internos de mobs (solo orcos)
+    - "Orc_Archer"
+    - "Orc_Berserker"
+    - "Orc_Shaman"
+    - "Orc_Assassin"
+
+display:
+  name: "&bElimina a los orcos de Skjervik"
+  lore-normal:
+    - "&7El pueblito de Skjervik está infestado."
+    - "&7Elimina a 50 orcos de cualquier tipo para liberar la zona."
+    - "&7¡No dejes que ninguno escape!"
+  lore-started:
+    - "&7Objetivo:"
+    - "&7 Mata a 50 orcos en Skjervik."
+
+  type: "wooden_sword"
+
+rewards:
+  - "quest admin moddata start {player} subir-torre-mago"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1
+# ...existing code...

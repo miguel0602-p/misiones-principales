@@ -1,0 +1,53 @@
+name: '&a&lCapitán Rurik'
+starts_with:
+- NPC with id 17
+start_conversation_radius: 5
+end_conversation_radius: 5
+can_be_started_on_air: true
+conversation:
+  conversation1:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7Has hecho un buen trabajo, %player%. Los orcos han sido derrotados y Skjervik está a salvo."
+        - "&7Dime, ¿qué has descubierto sobre esta amenaza?"
+        time: 5
+    options:
+      option1:
+        text:
+          - "&eLos orcos están siendo controlados para liberar al Lich, un necromago que va a traer a Nyxarath y destruir el mundo."
+        start_conversation: conversation2
+
+
+  conversation2:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7Malas noticias, %player%. Si el Lich regresa, todo estará perdido."
+        - "&7Debemos actuar rápido. Su fortaleza está al oeste de aquí, en las llanuras siguiendo el camino"
+        - "&7Ve allí y acaba con el Rey Orco; es el líder de esta invasión y el más fuerte de todos."
+        time: 6
+
+    options:
+      option1:
+        text: "&eIniciar misión: El Corazón de la Oscuridad"
+        start_conversation: conversation3
+      option2:
+        text: "&eDame más tiempo para prepararme."
+        start_conversation: conversation4
+  conversation3:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7Muy bien. Ve a la fortaleza y acaba con el Rey Orco."
+        time: 3
+        actions:
+        - "player_command: quest start ir-fortaleza-orco"
+        - "console_command: lp user %player% permission set mision6"
+        - "console_command: say &a[Misiones] Has comenzado la misión &fEl Corazón de la Oscuridad&a."
+  conversation4:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7Está bien, pero no tardes mucho."
+        time: 3

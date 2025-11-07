@@ -1,0 +1,36 @@
+# ...existing code...
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 7                             # cantidad de mobs a matar
+    names:
+    - "Orc_Warrior"                          # nombre interno del mob (no el display)
+    - "Orc_Archer"
+    - "Goblin_Archer" 
+    - "Goblin_Warrior" 
+
+
+display:
+  name: "&bVence a los enemigos que atacan"
+  lore-normal:
+    - "&7Ve a defender la caseta del pescador"
+    - "&7Una vez llegues al campamento maderero,"
+    - "&7sigue hacia el rio del oeste, una vez llegues, la podrás ver"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -72 Y= 104 Z= -697"
+
+  type: "wooden_sword"
+
+rewards:
+  - "quest admin moddata start {player} ir-campamento3"
+  - "wps selectWaypoint {player} 29edae6c-97c9-4b53-b9bb-52fe73bf318a"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

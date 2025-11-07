@@ -1,0 +1,36 @@
+
+tasks:
+  position:
+    type: "position"
+    x: -9                                   # x position
+    y: 103                                  # y position
+    z: -792                                   # z position
+    world: nuevo_spawn                          # name of world
+    distance-padding: 30                  # (OPTIONAL) padding zone in meters/blocks - 
+
+
+display:
+  name: "&bVe al primer campamento"
+  lore-normal:
+    - "&7Ve a defender el campamento de los leñadores"
+    - "&7Según sales de la ciudad, todo recto y un poco a la izquierda"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -9 Y= 103 Z= -792"
+
+  type: "leather_boots"
+
+rewards:
+  - "quest admin moddata start {player} campamento1"
+
+startstring:
+  - "&eHas comenzado la misión &bAtaque sorpresa&e. ¡Buena suerte!"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

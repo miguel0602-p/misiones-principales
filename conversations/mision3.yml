@@ -1,0 +1,72 @@
+starts_with:
+- NPC with id 17
+name: "&a&lCapitán Rurik"
+start_conversation_radius: 5
+end_conversation_radius: 5
+can_be_started_on_air: true
+conversation:
+
+    # ⚔️ INICIO DE LA MISIÓN 3
+    conversation1:
+        dialogue:
+            dialogue1:
+                requires:
+                - "%interactions_has_completed_quest_mensajero_perdido% == true"
+                text:
+                - "&7%player%, acaban de llegar informes de los exploradores."
+                - "&7Tiendas de campañas, fuego y gritos... en las &bRuinas de Vael'Noth&7."
+                time: 4
+            dialogue2:
+                text:
+                - "&7Desde allí organizan sus ataques. ¡Debemos detenerlos!"
+                - "&7Pero es extraño... En esas ruinas hubo un antiguo sello mágico."
+                - "&7Puede que Nyxarath los esté guiando para despertar algo que debería permanecer dormido"
+                time: 4
+            dialogue3:
+                text:
+                - "&7Ve a investigar su campamento"
+                - "&7Derrotalos para cesar sus ataques"
+                time: 4
+        options:
+            option1:
+                text: "&eIré a las ruinas de inmediato."
+                start_conversation: conversation2
+            option2:
+                text: "&e¿Un sello? ¿De qué hablas?"
+                start_conversation: conversation3
+
+    conversation2:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7Que la luz del Alba te acompañe, &f%player%&7."
+                - "&7Si no vuelves... sabré que las leyendas eran ciertas."
+                time: 3
+                actions:
+                - "player_command: quest start sello-roto"
+                - "console_command: lp user %player% permission set mision3"
+                - "console_command: say &a[Misiones] Has comenzado la misión &fEl Sello Roto&a."
+                start_conversation: conversation4
+
+    conversation3:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7Hace siglos, los magos del norte sellaron allí a un espíritu impuro."
+                - "&7Un hechicero que desafiaba la muerte... el &oLich&7."
+                - "&7Pero eso solo eran historias. Hasta hoy."
+                time: 5
+                actions:
+                - "player_command: quest start sello-roto"
+                - "console_command: lp user %player% permission set mision3"
+                - "console_command: say &a[Misiones] Has comenzado la misión &fEl Sello Roto&a."
+                - "console_command: wps selectWaypoint %player% f587b0ac-0c91-4edd-9b67-063002751a4b"
+                start_conversation: conversation4
+
+    conversation4:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7Dirígete al norte, más allá del río congelado."
+                - "&7Verás las ruinas cuando el aire empiece a oler a hierro y ceniza."
+                time: 3

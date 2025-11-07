@@ -1,0 +1,52 @@
+starts_with:
+- NPC with id 21 # Cambia este ID
+name: "&7&lEinar el Mensajero"
+start_conversation_radius: 4
+end_conversation_radius: 4
+can_be_started_on_air: true
+conversation:
+    conversation1:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7(Toses violentamente...)"
+                - "&7Eres... &f%player%&7, ¿verdad?"
+                time: 3
+            dialogue2:
+                text:
+                - "&7No... no llegué con la carta..."
+                - "&7Nos atacaron... Vinieron desde las montañas"
+                - "&7pero no eran solo orcos normales."
+                - "&7Había algo más... algo oscuro..."
+                time: 4
+            dialogue3:
+                text:
+                - "&7Entendí algo de lo que murmuraban..."
+                - "&7Hablaban de un Lich..., cosas sobre &dNyxarath&7..."
+                time: 4
+            dialogue4:
+                text:
+                - "&7Derroté a algunos de ellos, pero me rodearon..."
+                - "&7Maté a uno de ellos y dijo algo cuando estaba moribundo"
+                - "&dNyxarath&7... su poder consumirá todo..."
+                - "&7los orcos se reunen para atacarnos y destruir cualquier resistencia"
+                - "&7Por favor, lleva esta información a Rurik..."
+                time: 4
+                actions:
+                - "console_command: quest admin moddata complete %player% salvar"
+            #     - "&7Había chamanes entre ellos, recitaban palabras que helaban la sangre."
+            #     time: 3
+            # dialogue3:
+            #     text:
+            #     - "&7Vi... una figura entre los árboles..."
+            #     - "&7Ojos rojos... y un resplandor que no es de este mundo. Prometían poder a los que obedecieran."
+            #     - "&7Antes de perder el conocimiento, vi una huella que llevaba hacia las montañas: allí hay un campamento orco con excavaciones recientes."
+            #     time: 4
+            # dialogue4:
+            #     text:
+            #     - "&7Toma... la carta... &7(desecha un sobre rasgado cubierto de sangre)"
+            #     - "&7Dile... a Rurik... que... no fue... culpa solo de los orcos... algo los controla." 
+            #     - "&7Hay excavaciones en las montañas donde antes hubo cuevas arcanas; busca allí."
+            #     time: 4
+            #     actions:
+            #     - "console_command: quest admin moddata complete %player% salvar"

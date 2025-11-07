@@ -1,0 +1,38 @@
+# ...existing code...
+tasks:
+  position:
+    type: "position"
+    x: -310                                    # x position
+    y: 103                                  # y position
+    z: -813                                    # z position
+    world: nuevo_spawn                          # name of world
+    distance-padding: 30                  # (OPTIONAL) padding zone in meters/blocks - 
+
+
+display:
+  name: "&bBusca al mensajero"
+  lore-normal:
+    - "&7Busca e investiga qué ha pasado con el mensajero."
+    - "&7Se supone que fue hacia la derecha siguiendo el camino y paró en una cabaña"
+    - "&7 ahí se le perdió la pista"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -310 Y= 103 Z= -813"
+
+  type: "leather_boots"
+
+rewards:
+  - "quest admin moddata start {player} salvar"
+
+startstring:
+  - "&eHas comenzado la misión &bMensaje Perdido&e. ¡Buena suerte!"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1
+# ...existing code...

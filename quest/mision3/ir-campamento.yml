@@ -1,0 +1,39 @@
+# ...existing code...
+tasks:
+  position:
+    type: "position"
+    x: -526                                    # x position
+    y: 111                                  # y position
+    z: -1437                                     # z position
+    world: nuevo_spawn                          # name of world
+    distance-padding: 30                  # (OPTIONAL) padding zone in meters/blocks - 
+
+
+display:
+  name: "&bBusca el campamento de guerra Orco"
+  lore-normal:
+    - "&7Busca el campamento donde los Orcos organizan los ataques."
+    - "&7Es un campamento entre las montañas"
+    - "&7Eran unas antiguas con unos poderes arcanos olvidados en el tiempo..."
+    - "&7Desde ahí los orcos organizaron los ataques a la ciudad y contra el mensajero"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -526 Y= 111 Z= -1437"
+
+  type: "leather_boots"
+
+rewards:
+  - "quest admin moddata start {player} destruir-campamento"
+
+startstring:
+  - "&eHas comenzado la misión &bContraataque&e. ¡Buena suerte!"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1
+# ...existing code...

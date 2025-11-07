@@ -1,0 +1,35 @@
+# ...existing code...
+tasks:
+  position:
+    type: "position"
+    x: -77                                   # x position
+    y: 105                                  # y position
+    z: -977                                   # z position
+    world: nuevo_spawn                          # name of world
+    distance-padding: 30                  # (OPTIONAL) padding zone in meters/blocks - 
+
+
+display:
+  name: "&bVe a la ciudad"
+  lore-normal:
+    - "&7Cuenta que ya destruiste el campamento, pero encontraste una nota"
+    - "&7No sabes lo que pone pero el guardián puede saberlo"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -77 Y= 105 Z= -977"
+
+  type: "leather_boots"
+
+rewards:
+  - "mision_principal_admin {player} completar mision3"
+
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1
+# ...existing code...

@@ -1,0 +1,92 @@
+Nyxarath — Historia ampliada y guion de misión
+
+Resumen general
+
+Nyxarath es una deidad antigua y malvada que fue relegada y casi olvidada tras la caída de sus seguidores, los necromagos. Durante siglos su nombre fue solo un susurro en grabados prohibidos. Ahora, por razones desconocidas, Nyxarath busca volver y alterar el tejido del mundo. Para ello manipula a los vivos mediante promesas, corrupciones y ritos: su herramienta principal son los chamanes orcos, a los que corrompe y usa para abrir excavaciones en lugares con energía arcana residual.
+
+Estas excavaciones han despertado piezas del pasado enterradas bajo la tierra: sellos antiguos, hechizos y artefactos que sirven de puente para que las fuerzas necrománticas influyan en el mundo. De entre estas fuerzas emerge el Lich, un sirviente poderoso de Nyxarath. Aunque aún no ha recuperado toda su fuerza, actúa en las sombras y ha comenzado a manipular al Rey Orc, dirigiendo ataques y preparando el terreno para una liberación mayor.
+
+Cómo las misiones encajan en la historia
+
+Misión 1 — La embestida sorpresa
+
+Descripción: Los orcos atacan los puestos y las áreas cercanas a Eldrasheim. Antes de estos sucesos, humanos y orcos cohabitaban en relativa paz. La guerra es una sorpresa: los orcos comenzaron a volverse agresivos tras la influencia de chamanes corrompidos.
+Objetivo: Detener a los orcos en las cercanías, evitar que reúnan más tropas y cerrar cualquier excavación nueva.
+Lore clave a incluir en los diálogos:
+- Mencionar la coexistencia previa y la ruptura repentina.
+- Dudas sobre la naturaleza del cambio: voces en el viento, chamanes que convulsionan y hablan con algo.
+- Primeras pistas hacia excavaciones en las montañas.
+
+Misión 2 — El mensajero desaparecido
+
+Descripción: Enviamos a Einar con una carta de paz para intentar apaciguar la situación. No regresa. El jugador debe seguir sus huellas.
+Objetivo: Seguir la pista, encontrar a Einar y saber qué pasó.
+Revelación: Einar está moribundo; revela que fue emboscado por orcos con chamanes que recitaban palabras extrañas. Antes de morir indica la existencia de excavaciones en las montañas y habla de una pista que lleva a un campamento.
+Lore clave:
+- Los chamanes usan palabras antiguas; Einar vio un rastro que lleva hacia las montañas y las cuevas arcanas.
+- Einar deja una carta que más tarde resulta estar escrita en una lengua necromántica.
+
+Misión 3 — El campamento en las montañas
+
+Descripción: El jugador ataca y destruye el campamento orco descubierto por Einar.
+Objetivo: Destruir el campamento, recuperar evidencia (cartas, runas, artefactos).
+Revelación: Se encuentra una carta escrita en lengua de los necromagos — prueba de que los orcos están siendo utilizados como peones por algo más antiguo.
+Lore clave:
+- Las excavaciones han roto sellos; runas y símbolos de los necromagos aparecen en los túneles.
+- El jugador descubre que alguien trabaja para revivir o invocar a una fuerza mayor: Nyxarath.
+
+Misión 4 — Skjervik y el mago Eldrin Nieblaazul
+
+Descripción: El pueblito de Skjervik es atacado; Eldrin vive en una torre en la isla del pueblo. Salvarlo permitirá que descifre la carta.
+Objetivo: Salvar al mago, llevarlo a la torre y obtener su ayuda.
+Revelación: Eldrin confirma que las inscripciones son necrománticas y que solo alguien como un Lich podría mantener tal hechicería. Él no puede abandonar el pueblo hasta que sea seguro; requiere que el jugador haga una tarea para él.
+Lore clave:
+- Eldrin recuerda historias de necromagos y sellos antiguos.
+- Muestra preocupación por una deidad que susurra: Nyxarath.
+
+Misión 5 — La mina de amatistas
+
+Descripción: Eldrin pide al jugador que salve a aldeanos capturados y elimine los remanentes en la antigua mina de amatistas; a cambio descifrará la carta.
+Objetivo: Rescatar a los aldeanos y limpiar la mina de las fuerzas orcas y remanentes necrománticos.
+Revelación: La nota es un hechizo de control escrito en la lengua de los necromagos; los orcos no la habrían escrito. El mago sugiere que el Lich es el único capaz de tal obra, aunque cree que fue encadenado en los tiempos antiguos.
+Lore clave:
+- La mina contiene túneles con símbolos antiguos y restos de rituales.
+- Eldrin explica que el hechizo encontrado tiene la firma de un Lich y de su señora, Nyxarath.
+
+Misión 6 — La Fortaleza Orc y el Rey
+
+Descripción: La información reunida lleva al jugador a la Fortaleza Orc para derrotar al Rey Orc, quien está siendo manipulado.
+Objetivo: Llegar a la fortaleza, derrotar al Rey Orc y luego continuar hacia el santuario donde el verdadero mal se concentra.
+Revelación final: Tras vencer al Rey Orc y al Lich menor, el jugador descubre que lo que derrotó fue una proyección; el verdadero Lich y la influencia de Nyxarath aún persisten. Los poblados cercanos empiezan a infestarse de esqueletos, lo que demuestra que queda mucho por hacer.
+Lore clave:
+- El Rey Orc actuaba bajo control necromántico; su muerte no cierra la brecha completa.
+- El Lich es un siervo de Nyxarath; derrotar su proyección fue un paso, no la conclusión.
+
+Detalles para los diálogos (guionización)
+
+- Rurik (Capitán): voz grave, cansada pero determinada. Sus diálogos deben transmitir preocupación por la gente, sorpresa por la traición de los orcos y miedo latente hacia algo más grande. Debe pedir ayuda y dar órdenes concretas.
+
+- Einar (Mensajero): agonizante cuando le encuentras. Sus líneas deben ser cortas, entrecortadas y con imágenes: ojos rojos, voces, huellas hacia las montañas, un sobre rasgado con símbolos extraños.
+
+- Eldrin Nieblaazul (Mago): ensimismado y curioso; habla con términos arcanos, menciona necromancia, sellos y la imposible posibilidad de que el Lich esté relacionado. Pide un favor (misión 5) antes de ayudar.
+
+- Chamanes/Orcos: murmullos, invocaciones, y referencias a símbolos y excavaciones. No hace falta que todos hablen, pero las descripciones en diálogos deben mencionar signos de corrupción.
+
+- Proyección del Lich: voz fría y distante; frases con promesas de poder y dominación. Su aparición debe dejar claro que es solo una manifestación de algo más profundo.
+
+Sugerencias de incorporación en YAML
+
+- Incluir líneas en cada diálogo que insinúen lo siguiente:
+  - "Hay excavaciones donde antes hubo cuevas arcanas, y los orcos han desenterrado algo." 
+  - "Los chamanes entonan palabras antiguas que no deberían pronunciarse." 
+  - "La escritura es de los necromagos; esto no es obra de orcos comunes."
+  - "Nyxarath ha sido mencionada en viejas leyendas; su retorno traería colapso y muerte."
+
+Archivo de entrega
+
+He incluido este relato expandido como resumen para usar en los diálogos y documentar la trama. Si quieres, puedo:
+- Insertar líneas concretas en cada archivo YAML con la redacción exacta que prefieras (estilo, tonalidad, o frases clave).
+- Añadir efectos de sonido, títulos y recompensas narrativas para mejorar inmersión.
+- Normalizar todos los nombres de mobs y comprobaciones para evitar problemas con MythicMobs.
+
+Fin del documento.

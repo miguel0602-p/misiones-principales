@@ -1,0 +1,35 @@
+#TODOO
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 5                             # cantidad de mobs a matar
+    names:
+    - "Orc_Warrior"                          # nombre interno del mob (no el display)
+    - "Orc_Archer"
+    - "Goblin_Archer" 
+    - "Goblin_Warrior" 
+
+display:
+  name: "&bLibera el primer campamento"
+  lore-normal:
+    - "&7Ve a defender el campamento de los leñadores"
+    - "&7Según sales de la ciudad, todo recto y un poco a la izquierda"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -9 Y= 103 Z= -792"
+
+  type: "wood_sword"
+
+rewards:
+  - "quest admin moddata start {player} ir-campamento2"
+  - "wps selectWaypoint {player} b2ff895c-4e2a-4931-bf42-caf61beee3cd"
+
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

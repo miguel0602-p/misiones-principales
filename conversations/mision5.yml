@@ -1,0 +1,40 @@
+name: '&5&lEldrin Nieblaazul'
+starts_with:
+- NPC with id 18
+start_conversation_radius: 5
+end_conversation_radius: 5
+can_be_started_on_air: true
+conversation:
+  conversation1:
+    dialogue:
+      dialogue1:
+        text:
+        - "&5Hola otra vez, %player%."
+        - "&5¿Estás listo para ir a por esos orcos?"
+        time: 5
+    options:
+      option1:
+        text: 
+        - "&eSí, estoy listo, pero antes te tengo que contar lo que se."
+        - "&eLos orcos están siendo controlados por otro ser. Hablan cosas sobre un necromago llamado el Lich. y un ser llamado Nyxarath."
+        start_conversation: conversation2
+      option2:
+        text: "&eNo ahora."
+        start_conversation: conversation3
+  conversation2:
+    dialogue:
+      dialogue1:
+        text:
+        - "&5Toma estas palabras de advertencia y ve con cuidado."
+        time: 3
+        actions:
+        - "player_command: quest start ir-cueva-cristal"
+        - "console_command: lp user %player% permission set mision5"
+        - "console_command: say &a[Misiones] Has comenzado la misión &fEl Rastro Olvidado&a."
+        - "console_command: wps selectWaypoint %player% cb305777-f8a7-4df1-b3f4-cd54be92af61"
+  conversation3:
+    dialogue:
+      dialogue1:
+        text:
+        - "&5Entonces regresa cuando estés listo. La cueva no se irá a ningún lado."
+        time: 2

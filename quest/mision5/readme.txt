@@ -1,0 +1,4 @@
+- Ir a -242 109 -1705
+- Encontrar y salvar a Olrik (poner unas coordenadas cualquiera por ahora)
+- Vencer a un Orc_Giant
+- Volver con el mago

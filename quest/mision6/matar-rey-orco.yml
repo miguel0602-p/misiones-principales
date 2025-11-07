@@ -1,0 +1,31 @@
+
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 1
+    names:
+    - "Orc_King"
+
+display:
+  name: "&cDerrota al Rey Orco"
+  lore-normal:
+    - "&7El Rey Orc es el comandante de la fortaleza."
+    - "&7Derrota al jefe para abrir el camino al santuario."
+  lore-started:
+    - "&7Objetivo:"
+    - "&7 Mata al Rey Orc."
+
+  type: "netherite_sword"
+
+rewards:
+  - "quest admin moddata start {player} ir-santuario-lich"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1
+

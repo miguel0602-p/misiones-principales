@@ -1,0 +1,35 @@
+tasks:
+  position:
+    type: "position"
+    x: -242
+    y: 109
+    z: -1705
+    world: nuevo_spawn
+    distance-padding: 30
+
+display:
+  name: "&3Ve a la Cueva de Cristal"
+  lore-normal:
+    - "&7La pista encontrada en la torre del mago apunta"
+    - "&7hacia una cueva oculta, conocida por sus"
+    - "&7extrañas formaciones cristalinas."
+    - "&7Dirígete allí para seguir el rastro."
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -242 Y= 109 Z= -1705"
+  type: "compass"
+
+rewards:
+  - "quest admin moddata start {player} salvar-olrik"
+
+startstring:
+  - "&eHas comenzado la misión &3El Rastro Olvidado&e. ¡Ten cuidado!"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

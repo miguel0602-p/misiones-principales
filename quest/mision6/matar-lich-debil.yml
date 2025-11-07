@@ -1,0 +1,30 @@
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 1
+    names:
+    - "lich_debil"
+
+display:
+  name: "&5Derrota al Lich"
+  lore-normal:
+    - "&7Un antiguo Lich ha estado manipulando a los orcos"
+    - "&7desde las sombras, alimentándose del caos."
+    - "&7¡Pon fin a su reinado de terror de una vez por todas!"
+  lore-started:
+    - "&7Objetivo:"
+    - "&7 Mata al Lich."
+
+  type: "netherite_sword"
+
+rewards:
+  - "mision_principal_admin {player} completar mision6" # Recompensa final de la cadena de misiones principales
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

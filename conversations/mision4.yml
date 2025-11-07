@@ -1,0 +1,59 @@
+name: '&a&lCapitán Rurik'
+starts_with:
+- NPC with id 17
+start_conversation_radius: 5
+end_conversation_radius: 5
+can_be_started_on_air: true
+conversation:
+  conversation1:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7¡Saludos, %player%! Me alegra verte con vida."
+        - "&7¿Ya estás listo %player%?"
+        - "&7El pueblito está infectado por orcos y debemos despejarlo cuanto antes."
+        - "&7Hace tiempo, el mago Eldrin Nieblaazul vivía allí; es un estudioso de lenguas antiguas y podrá ayudarnos a descifrar lo que hemos encontrado."
+        - "&7Cuidado: hay indicios de que los orcos no actúan por su propia voluntad. Los chamanes han sido corrompidos y parecen ir con los orcos al ataque."
+        - "&7Ve a salvar al mago y habla con él en la torre: su conocimiento puede cambiar el rumbo de esta guerra."
+        time: 5
+    options:
+      option1:
+        text: "&eIniciar misión: El Asedio de Skjervik"
+        start_conversation: conversation2
+      option2:
+        text: "&eNecesito prepararme antes."
+        start_conversation: conversation3
+      option3:
+        text:
+          - "&eLe cuento a Rurik lo que me dijo Eldrin:"
+          - "&e\"Los orcos fueron manipulados por chamanes corrompidos; hay excavaciones arcanas y un nombre: Nyxarath, y un Lich detrás de esto.\""
+        start_conversation: conversation4
+
+  conversation2:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7Que la suerte te acompañe. Ve primero al pueblito y elimina la amenaza."
+        time: 3
+        actions:
+        - "player_command: quest start ir-a-skjervik"
+        - "console_command: lp user %player% permission set mision4"
+        - "console_command: say &a[Misiones] Has comenzado la misión &fEl Asedio de Skjervik&a."
+        - "console_command: wps selectWaypoint 8c7f0ee9-e489-443e-b0c0-7df26134a069"
+  conversation3:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7Vuelve cuando estés listo. Los hombres mueren defendiendo Skjervik"
+        time: 2
+  conversation4:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7¿Eso dijo Eldrin...? Esto confirma lo peor."
+        - "&7Si hay excavaciones y necromancia de por medio, no será un simple ataque orco."
+        - "&7Bien. Ve a la torre y habla con Eldrin. Cuando regreses, habla conmigo de nuevo."
+        time: 4
+        actions:
+        - "console_command: say &a[Misiones] Información recibida por Rurik."
+        start_conversation: conversation2

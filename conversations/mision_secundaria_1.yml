@@ -1,0 +1,94 @@
+name: '&a&lCapitán Rurik'
+starts_with:
+- NPC with id 17
+block_movement: false
+slow_effect: false
+can_be_started_on_air: true
+save_conversation_progress: false
+start_conversation_radius: 5
+end_conversation_radius: 5
+requires_permission: false
+conversation:
+  conversation1:
+    dialogue:
+      dialogue1:
+        text:
+        - '&7¡Tú ahí! ¿Recién llegado, eh?'
+        - '&7No has escogido un buen momento para visitar &f&lEldrasheim&7.'
+        - '&7Hay sombras que se estiran desde las montañas... nuestros vigías hablan de extrañas voces en el viento.'
+        time: 4
+      dialogue2:
+        text:
+        - '&7Los orcos de &cKar''Thuum&7 han cruzado el paso helado.'
+        - '&7¡Y atacan sin advertencia!'
+        - '&7Antes vivíamos en paz con algunos de ellos, pero algo ha cambiado sus corazones.'
+        time: 4
+      dialogue3:
+        text:
+        - '&7Nuestros exploradores hablaban de una &o''voz en los sueños''&7 que los'
+        - '&7empuja a la guerra... ahora lo sabemos: los chamanes orcos han sido corrompidos.'
+        - '&7Algunos dicen que una diosa llamada &dNyxarath&7 está despertando y susurro a través de ellos.'
+        time: 4
+      dialogue4:
+        text:
+        - '&7Si puedes empuñar un arma, necesitamos toda ayuda disponible.'
+        - '&7Dirígete a la &bPuerta&7 y ayuda a repeler el ataque.'
+        - '&7No permitas que los orcos reúnan refuerzos y ataque la ciudad'
+        - '&7&l¡Eldrasheim no caerá hoy!'
+        time: 5
+    options:
+      option1:
+        text: '&eEstoy listo para ayudar.'
+        start_conversation: conversation2
+      option2:
+        text: '&e¿Una voz en los sueños?'
+        start_conversation: conversation3
+      option3:
+        text: '&eNo es mi pelea, lo siento.'
+        start_conversation: conversation4
+  conversation2:
+    dialogue:
+      dialogue1:
+        text:
+        - '&7Así se habla, &f%player%&7. Dirígete a la &bPuerta&7 y demuestra
+          tu valor.'
+        - '&7Los orcos se organizan en 3 campamentos.'
+        - '&7El primero está todo recto según sales de la ciudad, era un campamento de leñadores'
+        - '&7El segundo está más lejos que el campamento de los leñadores. Es una cabaña donde viven los pescadores. Está cerca del río.'
+        - '&7El último sitio donde se organizan era un establo. Esta según sales de la ciudad, a la izquierda, en las nieves.'
+        -  
+        time: 3
+        actions:
+        - 'player_command: quest start ir-campamento1'
+        - "console_command: lp user %player% permission set mision1"
+        - "console_command: say &a[Misiones] Has comenzado la misión &fMisión 1&a."
+        - "console_command: wps selectWaypoint %player% 2118ecc5-dcca-4c0d-a9b0-c05105f96d76"
+         
+        start_conversation: conversation7
+  conversation3:
+    dialogue:
+      dialogue1:
+        text:
+        - '&7Sí, lo que oyes. Dicen que una presencia oscura se filtra en sus mentes.'
+        - '&7Les promete poder... y gloria. Pero solo trae muerte.'
+        time: 4
+        start_conversation: conversation1
+  conversation4:
+    dialogue:
+      dialogue1:
+        text:
+        - '&7Entonces reza para que los orcos no lleguen hasta tu puerta, forastero.'
+        - '&7Nosotros lucharemos por todos.'
+        time: 3
+        actions:
+        - 'console_command: mision_eliminar_ultima %player%'
+        start_conversation: conversation7
+  conversation7:
+    dialogue:
+      dialogue1:
+        text:
+        - '&7¡Ve! Los orcos ya están en las murallas. ¡Que los dioses te protejan!'
+        time: 2
+
+
+

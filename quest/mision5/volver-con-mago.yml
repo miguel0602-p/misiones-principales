@@ -1,0 +1,32 @@
+tasks:
+  position:
+    type: "position"
+    x: -448
+    y: 92
+    z: -1738
+    world: nuevo_spawn
+    distance-padding: 10
+
+display:
+  name: "&3Vuelve con el Mago"
+  lore-normal:
+    - "&7Olrik te ha contado información crucial."
+    - "&7Regresa a la torre del mago en Skjervik"
+    - "&7para informarle de tus hallazgos."
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -448 Y= 92 Z= -1738"
+
+  type: "book"
+
+rewards:
+  - "mision_principal_admin {player} completar mision5"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1

@@ -1,0 +1,46 @@
+# ...existing code...
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 20                             # cantidad de mobs a matar
+    names:
+    - "Orc_Warrior"                          # nombre interno del mob (no el display)
+    - "Orc_Archer"
+    - "Goblin_Archer" 
+    - "Goblin_Warrior"
+    - "Goblin_Shaman"
+  mythicmobs2:
+    type: "mythicmobs_killing"
+    amount: 1                             # cantidad de mobs a matar
+    names:
+    - "Orc_Giant"                          # nombre interno del mob (no el display)
+
+
+display:
+  name: "&bDestruye el campamento de guerra Orco"
+  lore-normal:
+    - "&7Destruye el campamento donde los Orcos organizan los ataques."
+    - "&7Es un campamento entre las montañas"
+    - "&7Eran unas antiguas con unos poderes arcanos olvidados en el tiempo..."
+    - "&7Desde ahí los orcos organizaron los ataques a la ciudad y contra el mensajero"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7 Ve a X= -526 Y= 111 Z= -1437"
+
+  type: "leather_boots"
+
+rewards:
+  - "quest admin moddata start {player} volver-campamento"
+
+startstring:
+  - "&eHas comenzado la misión &bContraataque&e. ¡Buena suerte!"
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1
+# ...existing code...

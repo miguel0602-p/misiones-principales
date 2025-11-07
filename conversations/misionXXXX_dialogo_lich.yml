@@ -1,0 +1,27 @@
+starts_with:
+- NPC with id 22
+name: "&b&lProyección del Lich"
+start_conversation_radius: 4
+end_conversation_radius: 4
+can_be_started_on_air: true
+conversation:
+    conversation1:
+        dialogue:
+            dialogue1:
+                text:
+                - "&b&o(El aire se congela... una voz antigua resuena en tu mente.)"
+                time: 3
+            dialogue2:
+                text:
+                - "&7¿Quién osa perturbar mi sueño...?"
+                - "&7El sello se ha roto... y con él... mis cadenas..."
+                time: 4
+            dialogue3:
+                text:
+                - "&7La &dDama del Ocaso&7 se alza de nuevo..."
+                - "&7&lNYXARATH&7 vendrá por todos vosotros."
+                time: 4
+                actions:
+                - "playsound: ENTITY_WITHER_SPAWN;1;0.8"
+                - "console_command: quest compete sello_roto"
+                - "console_command: say &6[Misiones] Has completado &fEl Sello Roto&6."

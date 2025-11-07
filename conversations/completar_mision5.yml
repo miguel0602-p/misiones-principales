@@ -1,0 +1,75 @@
+# ...existing code...
+name: '&5&lMago de Skjervik'
+starts_with:
+- NPC with id 18
+start_conversation_radius: 5
+end_conversation_radius: 5
+can_be_started_on_air: true
+conversation:
+  conversation1:
+    dialogue:
+      dialogue1:
+        text:
+          - "&5Hubo una era donde los magos dominaban este continente. Los reinos actuales ni siquiera existían."
+        time: 6
+      dialogue2:
+        text:
+          - "&5Estos magos eran los más poderosos que jamás hayan existido, capaces de moldear la realidad a su antojo."
+        time: 6
+      dialogue3:
+        text:
+          - "&5Hacían artilugios y hechizos que a día de hoy aún no comprendemos."
+        time: 5
+      dialogue4:
+        text:
+          - "&5Entre ellos había algunos que ansiaban el poder con todo su alma."
+        time: 5
+      dialogue5:
+        text:
+          - "&5Esos magos consiguieron hablar con un ser divino llamado Nyxarath."
+        time: 5
+      dialogue6:
+        text:
+          - "&5Nyxarath les otorgó el poder que ansiaban, pero tenían un precio que no comprendieron hasta que fue demasiado tarde."
+        time: 6
+      dialogue7:
+        text:
+          - "&5Fueron corrompidos: sus prácticas se volvieron oscuras y retorcidas. Manipulaban la vida y la muerte, creando aberraciones."
+        time: 7
+      dialogue8:
+        text:
+          - "&5Al final, Nyxarath exigió una invocación: la llave para traerla a nuestro mundo."
+        time: 6
+      dialogue9:
+        text:
+          - "&5Los demás magos se unieron para detener a los necromagos; hubo una guerra devastadora que los venció."
+        time: 6
+      dialogue10:
+        text:
+          - "&5Aun así, uno de sus súbditos más leales —el Lich— se entregó a Nyxarath y se transformó para vencer a la muerte."
+        time: 6
+      dialogue11:
+        text:
+          - "&5El Lich fue sellado en una prisión mágica bajo tierra, incapaz de cumplir su misión. La historia quedó como leyenda."
+        time: 6
+      dialogue12:
+        text:
+          - "&5Pero ahora, por razones que no comprendo del todo, Nyxarath busca volver. Los orcos han sido manipulados por sus chamanes."
+        time: 7
+      dialogue13:
+        text:
+          - "&5Han abierto excavaciones en lugares de energía arcana y han despertado cosas que debían permanecer dormidas."
+        time: 6
+      dialogue14:
+        text:
+          - "&5El hallazgo reciente parece haber activado una proyección del Lich y está moviendo al rey orco contra los humanos."
+        time: 7
+      dialogue15:
+        text:
+          - "&5Debes avisar a Rurik sobre esto. Nyxarath busca romper el sello y el Lich es la clave para traerla."
+        time: 6
+        actions:
+          - "console_command: lp user %player% permission unset mision5"
+          - "console_command: mision_principal_admin %player% completar completar_mision5"
+
+# ...existing code...

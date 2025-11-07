@@ -1,0 +1,48 @@
+name: '&a&lCapitán Rurik'
+starts_with:
+- NPC with id 17
+block_movement: false
+slow_effect: false
+can_be_started_on_air: true
+save_conversation_progress: false
+start_conversation_radius: 5
+end_conversation_radius: 5
+requires_permission: false
+conversation:
+  conversation1:
+    dialogue:
+        dialogue1:
+            requires:
+            - "%interactions_has_completed_quest_mensajero_perdido% == true"
+            text:
+            - "&7...Así que Einar está muerto."
+            - "&7Dices que atacaron desde las montañas"
+            - "&7y que murmuraban cosas sobre el Lich y Nyxarath."
+            - "&7Parece que los orcos no están solos en esto."
+            time: 4
+        dialogue2:
+            text:
+            - "&7Esto cambia todo, &f%player%&7."
+            - "&7Si hay otra fuerza en juego... debemos descubrir qué la mueve."
+            time: 4
+        dialogue3:
+            text:
+            - "&7Quédate cerca. Pronto habrá más trabajo para ti."
+            - "&7Y que los dioses protejan su alma."
+            time: 4
+            actions:
+            - "console_command: say final"
+            - "console_command: quest complete volver-a-rurik-mision-2"
+            - "console_command: lp user %player% permission unset mision2"
+            - "console_command: lp user %player% permission unset interactions.start.einar_mision2"
+            - "console_command: mision_principal_admin %player% completar completar_mision2"
+            - "console_command: say &a[Misiones] Has completado la misión &fMisión 2&a."
+            - "console_command: say &7La carta que encontraste tiene símbolos que el mago no reconoce; debemos consultar a Eldrin Nieblaazul."
+            start_conversation: conversation2
+
+  conversation2:
+      dialogue:
+          dialogue1:
+              text:
+              - "&7Descansemos esta noche... mañana empezará la verdadera guerra."
+              time: 3

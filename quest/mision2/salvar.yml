@@ -1,0 +1,42 @@
+#TODOO
+tasks:
+  mythicmobs:
+    type: "mythicmobs_killing"
+    amount: 5                             # cantidad de mobs a matar
+    names:
+    - "Orc_Warrior"                          # nombre interno del mob (no el display)
+    - "Orc_Archer"
+    - "Goblin_Archer" 
+    - "Goblin_Warrior"
+    - "Goblin_Assassin"
+  command:
+    type: "command"
+    command: "nuevo_mundo"                       # command to execute
+    ignore-case: true                     # (OPTIONAL) ignore capitalisation  - default: false
+    worlds:                               # (OPTIONAL) restrict to certain worlds
+     - "nuevo_spawn"
+
+display:
+  name: "&bBusca al mensajero"
+  lore-normal:
+    - "&7Derrota a los enemigos y busca al mensajero"
+    - "&7Preguntale que pasó"
+  lore-started:
+    - "&7Coordenadas:"
+    - "&7Ve a X= -310 Y= 103 Z= -813"
+
+  type: "wood_sword"
+
+rewards:
+  - "quest admin moddata start {player} volver-ciudad"
+
+
+options:
+  category: "misiones_principales"
+  repeatable: false
+  cooldown:
+    enabled: false
+  permission-required: false
+  titles-enabled: false
+  sort-order: 1
+# ...existing code...

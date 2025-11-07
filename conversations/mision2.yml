@@ -1,0 +1,71 @@
+starts_with:
+- NPC with id 17 # TODO: cambia si es distinto
+name: "&a&lCapitán Rurik"
+start_conversation_radius: 5
+end_conversation_radius: 5
+can_be_started_on_air: true
+conversation:
+
+    # 🧩 INICIO DE LA MISIÓN 2
+    conversation10:
+        dialogue:
+            dialogue1:
+                requires:
+                - "%interactions_has_completed_quest_sombras_eldrasheim% == true"
+                text:
+                - "&7Buen trabajo, &f%player%&7. Pero temo que no hay descanso aún."
+                - "&7Nuestro mensajero, &eEinar&7, no regresó del paso norte. Algo en su regreso nos inquieta."
+                time: 4
+            dialogue2:
+                text:
+                - "&7Llevaba una carta de tregua para los orcos. Si ha caído, la guerra será inevitable."
+                - "&7Busca su rastro en el Bosque Helado: algunos testigos mencionan huellas que se dirigen hacia las montañas, donde han abierto excavaciones."
+                - "&7Ten cuidado: escuchas de los testigos hablan de chamanes orcos entonando extrañas invocaciones."
+                time: 4
+            dialogue3:
+                text:
+                - "&7Busca en el &bBosque Helado&7, más allá del río. Y cuidado..."
+                - "&7Hay rumores de sombras moviéndose entre los árboles."
+                time: 4
+        options:
+            option1:
+                text: "&eIré tras él de inmediato."
+                start_conversation: conversation11
+            option2:
+                text: "&e¿Y si ya está muerto?"
+                start_conversation: conversation12
+
+    conversation11:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7Buena suerte, &f%player%&7. Que la luz del Alba te guíe."
+                time: 2
+                actions:
+                - "player_command: quest start ir-a-salvar"
+                - "console_command: lp user %player% permission set mision2"
+                - "console_command: say &a[Misiones] Has comenzado la misión &fMisión 2&a."
+                start_conversation: conversation13
+
+    conversation12:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7Entonces tráeme su cuerpo o su carta. Cualquiera de los dos valdrá para la verdad."
+                time: 3
+                actions:
+                - "player_command: quest start ir-a-salvar"
+                - "console_command: lp user %player% permission set mision2" 
+                - "console_command: lp user %player% permission set interactions.start.einar_mision2"
+                - "console_command: say &a[Misiones] Has comenzado la misión &fMisión 2&a."
+                - "console_command: wps selectWaypoint %player% 7bb77d68-c918-457c-9555-8a875ccdf006"
+                start_conversation: conversation13
+
+    conversation13:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7El paso está lleno de carroña y emboscadas. Ve preparado."
+                - "&7Si sigues las huellas hacia las montañas, busca excavaciones y campamentos recientes."
+                - "&7Y recuerda... no todos los enemigos sangran. Algunos susurran y manipulan desde las sombras."
+                time: 3

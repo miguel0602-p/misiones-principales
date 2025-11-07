@@ -1,0 +1,181 @@
+# ==========================================
+# SISTEMA DE PROGRESO AUTOMÁTICO DE MISIONES
+# Autor: ChatGPT (para Divinix)
+# Requiere: SkBee
+# ==========================================
+
+on script load:
+    # ⚙️ Orden de misiones (puedes ampliarlo libremente)
+    set {orden_misiones::*} to "mision1", "completar_mision1", "mision2", "completar_mision2", "mision3", "completar_mision3", "mision4", "completar_mision4", "mision5", "completar_mision5", "mision6", "completar_mision6"
+    broadcast "&a[SistemaMisiones] &7Cargadas %size of {orden_misiones::*}% misiones en orden."
+
+# ===============================
+# 🔸 COMANDO PRINCIPAL DE PROGRESO
+# ===============================
+command /mision_siguiente  <player>:
+    permission: mision.usar
+    trigger:
+        set {_p} to arg-1
+        set {_actual} to {mision_actual.%{_p}%}
+zz
+        if {_actual} is not set:
+            set {_primera} to {orden_misiones::1}
+            set {mision_actual.%{_p}%} to {_primera}
+            set {misiones.%{_primera}%.%{_p}%} to "activa"
+            execute console command "/int start %{_primera}% %{_p}%"
+            send "&aHas iniciado la misión &f%{_primera}%&a." to {_p}
+            stop
+
+        if {misiones.%{_actual}%.%{_p}%} is "activa":
+            send "&eYa tienes una misión activa: &f%{_actual}%." to {_p}
+            stop
+
+        if {misiones.%{_actual}%.%{_p}%} is "completada":
+            # Buscar el índice de la misión actual
+            set {_index} to 0
+            loop {orden_misiones::*}:
+                add 1 to {_index}
+                if loop-value is {_actual}:
+                    stop loop
+
+            # Obtener la siguiente misión si existe
+            set {_siguiente} to {orden_misiones::%{_index}+1%}
+
+            if {_siguiente} is set:
+                set {mision_actual.%{_p}%} to {_siguiente}
+                set {misiones.%{_siguiente}%.%{_p}%} to "activa"
+                execute console command "/int start %{_siguiente}% %{_p}%"
+                send "&aHas avanzado a la misión &f%{_siguiente}%&a." to {_p}
+            else:
+                send "&6¡Has completado todas las misiones disponibles!" to {_p}
+
+
+
+
+
+command /mision_reset <offlineplayer>:
+    permission: mision.admin
+    usage: &cUso: /mision_reset <jugador>
+    trigger:
+        set {_p} to arg-1
+
+        if {_p} is not set:
+            send "&cUso: /mision_reset <jugador>" to player
+            stop
+
+        # Eliminar progreso de todas las misiones
+        loop {orden_misiones::*}:
+            delete {misiones.%loop-value%.%{_p}%}
+
+        # Eliminar referencia a misión actual
+        delete {mision_actual.%{_p}%}
+
+        send "&cTodo el progreso de misiones de &f%{_p}% &cha sido reseteado." to player
+        if {_p} is online:
+            send "&cTu progreso de misiones ha sido reiniciado por un administrador." to {_p}
+
+
+command /mision_eliminar_ultima <offlineplayer>:
+    permission: mision.admin
+    usage: &cUso: /mision_eliminar_ultima <jugador>
+    trigger:
+        set {_p} to arg-1
+        if {_p} is not set:
+            send "&cUso: /mision_eliminar_ultima <jugador>" to player
+            stop
+
+        # Obtener misión actual del jugador
+        set {_actual} to {mision_actual.%{_p}%}
+        if {_actual} is not set:
+            send "&eEl jugador &f%{_p}% &eno tiene ninguna misión actual." to player
+            stop
+
+        # Buscar índice (posición) de la misión actual en la lista {orden_misiones::*}
+        set {_foundIndex} to 0
+        set {_i} to 0
+        loop {orden_misiones::*}:
+            add 1 to {_i}
+            if loop-value is {_actual}:
+                set {_foundIndex} to {_i}
+                stop loop
+
+        if {_foundIndex} is 0:
+            send "&cNo se encontró la misión &f%{_actual}% &cen la lista de orden." to player
+            stop
+
+        # Eliminar el estado de esa misión para el jugador
+        delete {misiones.%{_actual}%.%{_p}%}
+
+        # Intentar retroceder a la misión anterior (si existe)
+        if {_foundIndex} > 1:
+            set {_prevIndex} to {_foundIndex} - 1
+            set {_anterior} to {orden_misiones::%{_prevIndex}%}
+            if {_anterior} is set:
+                set {mision_actual.%{_p}%} to {_anterior}
+                send "&6Se eliminó &f%{_actual}% &6para &f%{_p}%&6. Su misión actual ahora es &e%{_anterior}%." to player
+            else:
+                # fallback por si algo raro pasa
+                delete {mision_actual.%{_p}%}
+                send "&6Se eliminó &f%{_actual}% &6para &f%{_p}%&6. Ahora no tiene misión activa." to player
+        else:
+            # Era la primera misión de la lista
+            delete {mision_actual.%{_p}%}
+            send "&6Se eliminó &f%{_actual}% &6para &f%{_p}%&6. Ahora no tiene misión activa." to player
+
+        # Opcional: resetear estado dentro de Interactions (descomenta si quieres)
+        # execute console command "int reset %{_actual}% %{_p}%"
+
+
+
+command /mision_principal_admin <offlineplayer> <text> <text>:
+    permission: mision.admin
+    usage: &cUso: /mision_principal_admin <jugador> [iniciar|completar|resetear] <nombre_mision>
+    trigger:
+        if arg-1 is not set:
+            send "&cUso: /mision_principal_admin <jugador> [iniciar|completar|resetear] <nombre_mision>" to player
+            stop
+
+        set {_p} to arg-1
+        set {_accion} to arg-2
+        set {_mision} to arg-3
+
+        if {_accion} is "iniciar":
+            set {misiones.%{_mision}%.%{_p}%} to "activa"
+            send "&aHas iniciado la misión &f%{_mision}% &apara &f%{_p}%."
+            execute console command "int start %{_mision}% %{_p}%"
+
+            
+        else if {_accion} is "completar":
+            set {misiones.%{_mision}%.%{_p}%} to "completada"
+            send "&aHas completado la misión &f%{_mision}% &apara &f%{_p}%."
+            # execute console command "int start %{_mision}% %{_p}%"
+            
+            
+        else if {_accion} is "resetear":
+            delete {misiones.%{_mision}%.%{_p}%}
+            send "&cHas reseteado la misión &f%{_mision}% &cpara &f%{_p}%."
+        else:
+            send "&cAcción desconocida. Usa: iniciar / completar / resetear."
+
+# Autocompletado con SkBee (corregido — sin usar arg-* en el evento)
+on tab complete of "/mision_principal_admin":
+    # Posición 1: Jugadores (sugerimos todos los jugadores online)
+    delete {_tmp_players::*}
+    loop all players:
+        add loop-player's name to {_tmp_players::*}
+    if {_tmp_players::*} is set:
+        set tab completions for position 1 to {_tmp_players::*}
+
+    # Posición 2: Acciones (iniciar, completar, resetear)
+    set tab completions for position 2 to "iniciar", "completar", "resetear"
+
+    # Posición 3: Nombre de la misión (lista dinámica)
+    delete {_misiones_disponibles::*}
+    loop {orden_misiones::*}:
+        add loop-value to {_misiones_disponibles::*}
+
+    if {_misiones_disponibles::*} is set:
+        set tab completions for position 3 to {_misiones_disponibles::*}
+    else:
+        # Fallback por si no hay misiones registradas
+        set tab completions for position 3 to "sombras_eldrasheim", "mensajero_perdido", "sello_roto"

@@ -1,0 +1,73 @@
+starts_with:
+- NPC with id 17
+name: "&a&lCapitán Rurik"
+start_conversation_radius: 5
+end_conversation_radius: 5
+can_be_started_on_air: true
+conversation:
+
+    # ⚔️ INICIO DE LA MISIÓN XXXX
+    conversation1:
+        dialogue:
+            dialogue1:
+                requires:
+                - "%interactions_has_completed_quest_mensajero_perdido% == true"
+                text:
+                - "&7%player%, acaban de llegar informes de los exploradores."
+                - "&7Han hallado campamentos orcos en las montañas, excavando donde antes hubo cuevas arcanas."
+                - "&7Traen noticias de luces azules y extrañas runas en los túneles que han abierto."
+                time: 4
+            dialogue2:
+                text:
+                - "&7Los ancianos dicen que allí fue sellado algo... antiguo."
+                - "&7La escritura encontrada no es orca; parece de los necromagos, una secta que adoraba a la muerte y a Nyxarath."
+                - "&7Si ese sello se ha debilitado por sus excavaciones, podríamos enfrentarnos a algo terrible."
+                time: 4
+            dialogue3:
+                text:
+                - "&7Ve a investigar el campamento orco en las montañas y destrúyelo. Busca pruebas de excavaciones y cualquier pergamino o artefacto."
+                - "&7Si encuentras una carta con símbolos extraños, tráemela; puede ser la clave para entender quién los dirige."
+                - "&7Y no toques nada que brille azul: ese resplandor parece estar relacionado con los ritos necrománticos."
+                time: 4
+        options:
+            option1:
+                text: "&eIré a las ruinas de inmediato."
+                start_conversation: conversation2
+            option2:
+                text: "&e¿Un sello? ¿De qué hablas?"
+                start_conversation: conversation3
+
+    conversation2:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7Que la luz del Alba te acompañe, &f%player%&7."
+                - "&7Si no vuelves... sabré que las leyendas eran ciertas."
+                time: 3
+                actions:
+                - "player_command: quest start sello-roto"
+                - "console_command: lp user %player% permission set mision3"
+                - "console_command: say &a[Misiones] Has comenzado la misión &fEl Sello Roto&a."
+                start_conversation: conversation4
+
+    conversation3:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7Hace siglos, los magos del norte sellaron allí a un espíritu impuro."
+                - "&7Un rey que desafiaba la muerte... un &oLich&7."
+                - "&7Pero eso solo eran historias. Hasta hoy."
+                time: 5
+                actions:
+                - "player_command: quest start sello-roto"
+                - "console_command: lp user %player% permission set mision3"
+                - "console_command: say &a[Misiones] Has comenzado la misión &fEl Sello Roto&a."
+                start_conversation: conversation4
+
+    conversation4:
+        dialogue:
+            dialogue1:
+                text:
+                - "&7Dirígete al norte, más allá del río congelado."
+                - "&7Verás las ruinas cuando el aire empiece a oler a hierro y ceniza."
+                time: 3
