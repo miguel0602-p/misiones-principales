@@ -13,21 +13,20 @@ conversation:
     dialogue:
       dialogue1:
         text:
-        - '&7              Has vuelto con vida, &f%player%&7.'
-        - '&7              Pensé que te habríamos perdido en la Puerta Norte.'
+        - '&7Has vuelto con vida, &f%player%&7.'
+        - '&7Pensé que te habríamos perdido en la Puerta Norte.'
         time: 3
       dialogue2:
         text:
-        - '&7              Gracias a ti, Eldrasheim sigue en pie.'
-        - '&7              Los orcos se han retirado y ya solo quedan los restos de la batalla...'
-        - '&7              pero algo en sus ojos me inquieta.'
+        - '&7Gracias a ti, Eldrasheim sigue en pie.'
+        - '&7Los orcos se han retirado y ya solo quedan los restos de sus partidas...
+          pero algo en sus ojos me inquieta.'
         time: 4
       dialogue3:
         text:
-        - '&7              Decían escuchar a una diosa susurrándoles desde las sombras.'
-        - '&7              No sé qué significa, pero temo que esto solo sea el principio...'
-        - '&7              Al recuperar estos lugares quizás encontremos pistas: '
-        - '&7              &eLas excavaciones orcas han desenterrado algo que no debemos ignorar.'
+        - '&7Decían escuchar a una diosa susurrándoles desde las sombras.'
+        - '&7No sé qué significa, pero temo que esto solo sea el principio...'
+        - '&7Al recuperar estos lugares quizás encontremos pistas: las excavaciones orcas han desenterrado algo que no debemos ignorar.'
         time: 4
         actions:
         - "console_command: lp user %player% permission unset mision1"
