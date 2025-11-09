@@ -1,4 +1,4 @@
-name: '&a&lCapitán Rurik'
+name: '         ☣         &a&lCapitán Rurik'
 starts_with:
 - NPC with id 17
 block_movement: false
@@ -13,10 +13,9 @@ conversation:
     dialogue:
       dialogue1:
         text:
-        
         - '&7'
-        - '&7         ☣         ¡Tú ahí! ¿Recién llegado, eh?'
         - '&7'
+        - '&7             ¡Tú ahí! ¿Recién llegado, eh?'
         - '&7             No has escogido un buen momento para visitar &f&lEldrasheim&7.'
         - '&7             Hay sombras que se estiran desde las montañas...'
         - '&7             nuestros vigías hablan de extrañas voces en el viento.'
@@ -24,8 +23,8 @@ conversation:
       dialogue2:
         text:
         - '&7'
-        - '&7         ☣         Los orcos de &cKar''Thuum&7 han cruzado el paso helado.'
         - '&7'
+        - '&7             Los orcos de &cKar''Thuum&7 han cruzado el paso helado.'
         - '&7             ¡Y atacan sin advertencia!'
         - '&7             Antes vivíamos en paz con algunos de ellos, pero algo'
         - '&7             ha cambiado sus corazones.'
@@ -33,8 +32,8 @@ conversation:
       dialogue3:
         text:
         - '&7'
-        - '&7         ☣         Nuestros exploradores hablaban de una &o''voz en los sueños'''
         - '&7'
+        - '&7              Nuestros exploradores hablaban de una &o''voz en los sueños'''
         - '&7              que los empuja a la guerra... ahora lo sabemos:'
         - '&c              Los chamanes orcos han sido corrompidos.'
         - '&f'
@@ -44,8 +43,8 @@ conversation:
       dialogue4:
         text:
         - '&7'
-        - '&7         ☣         Si puedes empuñar un arma, necesitamos toda ayuda disponible.'
         - '&7'
+        - '&7              Si puedes empuñar un arma, necesitamos toda ayuda disponible.'
         - '&7              Dirígete a la &bPuerta &7y ayuda a repeler el ataque.'
         - '&7              No permitas que los orcos reúnan refuerzos y ataquen a la ciudad'
         - '&7&l            ¡Eldrasheim no caerá hoy!'
@@ -65,8 +64,8 @@ conversation:
       dialogue1:
         text:
         - '&7'
-        - '&7         ☣         Así se habla, &f%player%&7. Dirígete a la &bPuerta &7y demuestra tu valor.'
         - '&7'
+        - '&7              Así se habla, &f%player%&7. Dirígete a la &bPuerta &7y demuestra tu valor.'
         - '&7              Los orcos se están organizando en 3 campamentos.'
         - '&7              El &bprimero &7está saliendo recto de la ciudad, era un campamento de leñadores'
         - '&7              El &esegundo &7está más lejos del campamento de los leñadores.'
@@ -86,7 +85,8 @@ conversation:
       dialogue1:
         text:
         - '&7'
-        - '&7         ☣         Sí, lo que oyes. Dicen que es una presencia oscura que se filtra en sus mentes.'
+        - '&7'
+        - '&7              Sí, lo que oyes. Dicen que es una presencia oscura que se filtra en sus mentes.'
         - '&7'
         - '&7              Les promete poder y gloria... Pero solo trae muerte.'
         time: 4
@@ -96,9 +96,9 @@ conversation:
       dialogue1:
         text:
         - '&7'
-        - '&7         ☣         Entonces reza para que los orcos'
         - '&7'
-        - '&7              no lleguen hasta tu puerta, forastero.'
+        - '&7              Entonces reza para que los orcos no lleguen hasta tu puerta, forastero.'
+        - '&7'
         - '&7              Nosotros lucharemos por todos.'
         time: 3
         actions:
@@ -109,9 +109,9 @@ conversation:
       dialogue1:
         text:
         - '&7'
-        - '&7         ☣          ¡Vé! Los orcos ya están en las murallas.'
         - '&7'
-        - '&7              ¡Qué los dioses te protejan!'
+        - '&7              ¡Vé! Los orcos ya están en las murallas. ¡Qué los dioses te protejan!'
+        - '&7'
         time: 2
 
 
