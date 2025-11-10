@@ -1,6 +1,6 @@
 starts_with:
 - NPC with id 17
-name: "&a&lCapitán Rurik"
+name: "         ☣          &a&lCapitán Rurik"
 start_conversation_radius: 5
 end_conversation_radius: 5
 can_be_started_on_air: true
@@ -13,19 +13,30 @@ conversation:
                 requires:
                 - "%interactions_has_completed_quest_mensajero_perdido% == true"
                 text:
-                - "&7%player%, acaban de llegar informes de los exploradores."
-                - "&7Tiendas de campañas, fuego y gritos... en las &bRuinas de Vael'Noth&7."
+                - '&7'         ## Hay sombras que se estiran desde las montañas...  (comentario para saber el tamaño del chat xd)
+                - '&7'
+                - "&7             Hey! %player%, acaban de llegar nuevos"
+                - "&7             informes de los exploradores. Hablaron de:"
+                - "&7             Tiendas de campañas, incendios y gritos..."
+                - "&7             en las &bRuinas de Vael'Noth&7."
                 time: 4
             dialogue2:
                 text:
-                - "&7Desde allí organizan sus ataques. ¡Debemos detenerlos!"
-                - "&7Pero es extraño... En esas ruinas hubo un antiguo sello mágico."
-                - "&7Puede que Nyxarath los esté guiando para despertar algo que debería permanecer dormido"
+                - '&7'
+                - '&7'
+                - "&7             Desde allí organizan sus ataques."
+                - "&7             ¡Debemos detenerlos!"
+                - "&7             Pero es extraño... En esas ruinas hubo"
+                - "&7             antiguamente un sello mágico."
+                - "&7             Puede que Nyxarath los esté guiando para"
+                - "&7             despertar algo que debería permanecer dormido."
                 time: 4
             dialogue3:
                 text:
-                - "&7Ve a investigar su campamento"
-                - "&7Derrotalos para cesar sus ataques"
+                - '&7'
+                - '&7'
+                - "&7             Ve a investigar su campamento"
+                - "&7             Derrotalos para cesar sus ataques"
                 time: 4
         options:
             option1:
@@ -39,8 +50,10 @@ conversation:
         dialogue:
             dialogue1:
                 text:
-                - "&7Que la luz del Alba te acompañe, &f%player%&7."
-                - "&7Si no vuelves... sabré que las leyendas eran ciertas."
+                - '&7'
+                - '&7'
+                - "&7             Que la luz del Alba te acompañe."
+                - "&7             Esperemos que las leyendas no sean ciertas..."
                 time: 3
                 actions:
                 - "player_command: quest start sello-roto"
@@ -52,9 +65,12 @@ conversation:
         dialogue:
             dialogue1:
                 text:
-                - "&7Hace siglos, los magos del norte sellaron allí a un espíritu impuro."
-                - "&7Un hechicero que desafiaba la muerte... el &oLich&7."
-                - "&7Pero eso solo eran historias. Hasta hoy."
+                - '&7'
+                - '&7'
+                - "&7             Hace siglos, los magos del norte sellaron"
+                - "&7             allí a un espíritu impuro."
+                - "&7             Un hechicero que desafiaba la muerte, el &oLich&7."
+                - "&7             Pero eso solo eran historias. Hasta hoy."
                 time: 5
                 actions:
                 - "player_command: quest start sello-roto"
@@ -67,6 +83,9 @@ conversation:
         dialogue:
             dialogue1:
                 text:
-                - "&7Dirígete al norte, más allá del río congelado."
-                - "&7Verás las ruinas cuando el aire empiece a oler a hierro y ceniza."
+                - '&7'
+                - '&7'
+                - "&7             Dirígete al norte, más allá del río congelado."
+                - "&7             Verás las ruinas cuando el aire empiece"
+                - "&7             a oler a hierro y cenizas..."
                 time: 3

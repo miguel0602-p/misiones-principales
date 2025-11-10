@@ -1,4 +1,4 @@
-name: '&a&lCapitán Rurik'
+name: '         ☣          &a&lCapitán Rurik'
 starts_with:
 - NPC with id 17
 start_conversation_radius: 5
@@ -9,12 +9,22 @@ conversation:
     dialogue:
       dialogue1:
         text:
-        - "&7¡Saludos, %player%! Me alegra verte con vida."
-        - "&7¿Ya estás listo %player%?"
-        - "&7El pueblito está infectado por orcos y debemos despejarlo cuanto antes."
-        - "&7Hace tiempo, el mago Eldrin Nieblaazul vivía allí; es un estudioso de lenguas antiguas y podrá ayudarnos a descifrar lo que hemos encontrado."
-        - "&7Cuidado: hay indicios de que los orcos no actúan por su propia voluntad. Los chamanes han sido corrompidos y parecen ir con los orcos al ataque."
-        - "&7Ve a salvar al mago y habla con él en la torre: su conocimiento puede cambiar el rumbo de esta guerra."
+        - '&7'         ## Hay sombras que se estiran desde las montañas...  (comentario para saber el tamaño del chat xd)
+        - '&7'
+        - "&7             ¡Saludos, %player%! Me alegra mucho verte."
+        - "&7             ¿Estás listo para la batalla?"
+        - "&7             El pueblo está infectado por orcos y"
+        - "&7             debemos despejarlo cuanto antes."
+        - "&7             Hace tiempo, el mago &5Eldrin Nieblaazul"
+        - "&7             vivía allí; es un estudioso de lenguas antiguas,"
+        - "&7             podría ayudarnos a descifrar lo que encontramos."
+        - '&7'
+        - "&7             &cCuidado: &7Hay indicios de que los orcos no"
+        - "&7             actúan por su propia voluntad. Los chamanes"
+        - "&7             han sido corrompidos y parecen ir con los orcos"
+        - '&7'
+        - "&7             Ve a &asalvar &7al mago y habla con él en la torre:"
+        - "&e             Su conocimiento nos ayudará alcanzar la victoria."
         time: 5
     options:
       option1:
@@ -33,7 +43,10 @@ conversation:
     dialogue:
       dialogue1:
         text:
-        - "&7Que la suerte te acompañe. Ve primero al pueblito y elimina la amenaza."
+        - '&7'
+        - '&7'
+        - "&7             Que la suerte te acompañe. Ve primero al pueblo"
+        - "&7             y defiéndelo de los orcos."
         time: 3
         actions:
         - "player_command: quest start ir-a-skjervik"
@@ -44,15 +57,22 @@ conversation:
     dialogue:
       dialogue1:
         text:
-        - "&7Vuelve cuando estés listo. Los hombres mueren defendiendo Skjervik"
+        - '&7'
+        - '&7'
+        - "&7            Vuelve cuando estés listo. Cada segundo cuenta."
+        - "&7            Los orcos no esperarán."
         time: 2
   conversation4:
     dialogue:
       dialogue1:
         text:
-        - "&7¿Eso dijo Eldrin...? Esto confirma lo peor."
-        - "&7Si hay excavaciones y necromancia de por medio, no será un simple ataque orco."
-        - "&7Bien. Ve a la torre y habla con Eldrin. Cuando regreses, habla conmigo de nuevo."
+        - '&7'
+        - '&7'
+        - "&7           ¿Eso dijo Eldrin...? Esto confirma lo peor."
+        - "&7           Si hay excavaciones y necromancia de por medio,"
+        - "&7           no será un simple ataque orco..."
+        - "&7           Bien. Ve a la torre y habla con Eldrin. Rápido."
+        - "&7           Cuando regreses, habla conmigo de nuevo."
         time: 4
         actions:
         - "console_command: say &a[Misiones] Información recibida por Rurik."

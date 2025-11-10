@@ -1,4 +1,4 @@
-name: "&a&lCapitán Rurik"
+name: "         ☣          &a&lCapitán Rurik"
 starts_with:
 - NPC with id 17
 start_conversation_radius: 5
@@ -11,18 +11,27 @@ conversation:
         requires:
         - "%interactions_has_completed_quest_sello_roto% == true"
         text:
-        - "&7¡Volviste justo a tiempo!"
-        - "&7Han llegado noticias del pueblo de Skjervik"
-        - "&7Dices que atacaron desde las montañas hordas infinitas de orcos"
+        - '&7'         ## Hay sombras que se estiran desde las montañas...  (comentario para saber el tamaño del chat xd)
+        - '&7'
+        - "&7             ¡Volviste justo a tiempo!"
+        - "&7             Han llegado noticias del pueblo de Skjervik"
+        - "&7             Dicen que atacaron desde las montañas"
+        - "&7             hordas infinitas de orcos."
         time: 4
       dialogue2:
         text:
-        - "&7Preparáte cuanto antes."
-        - "&7Debes volver y defender al los habitantes de Skjervik."
+        - '&7'
+        - '&7'
+        - "&7             Preparáte cuanto antes."
+        - "&7             ¡Debes defender a los habitantes de Skjervik!"
         time: 4
       dialogue3:
         text:
-        - "&7Esto está más allá de mi comprensión, %player%."
+        - '&7'
+        - '&7'
+        - "&7             Esto está más allá de mi entendimiento..."
+        - "&7             ¿Cómo han podido romper el sello que"
+        - "&7             mantenía al Lich confinado durante siglos?"
         time: 4
         actions:
         - "console_command: mision_principal_admin %player% completar completar_mision3"
@@ -34,6 +43,9 @@ conversation:
     dialogue:
       dialogue1:
         text:
-        - "&7Prepárate. Si los enanos aún viven allí, quizás tengan las respuestas que necesitamos."
-        - "&7Y si no... que los dioses nos amparen."
+        - '&7'
+        - '&7'
+        - "&7             Prepárate. Si los enanos aún viven allí,"
+        - "&7             quizás tengan las respuestas que necesitamos."
+        - "&7             Y si no... que los dioses nos amparen."
         time: 4
