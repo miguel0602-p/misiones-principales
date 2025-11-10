@@ -45,6 +45,7 @@ conversation:
         - "player_command: quest start ir-fortaleza-orco"
         - "console_command: lp user %player% permission set mision6"
         - "console_command: say &a[Misiones] Has comenzado la misión &fEl Corazón de la Oscuridad&a."
+        - "console_command: wps selectWaypoint %player% fd030d7c-9ab8-4441-b3c5-fe707952ccbd"
   conversation4:
     dialogue:
       dialogue1:

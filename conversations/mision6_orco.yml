@@ -1,0 +1,43 @@
+name: '&x&1&2&E&2&2&3&lValik'
+starts_with:
+- NPC with id 17
+start_conversation_radius: 5
+end_conversation_radius: 5
+can_be_started_on_air: true
+conversation:
+  conversation1:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7Psss... tranquilo, no te haré daño."
+        - "&7He oído que has estado luchando contra los orcos últimamente."
+        - "&7No todos somos enemigos. Algo oscuro ha empezado a controlar a nuestro rey."
+        - "&7Las órdenes proceden de Uzgul'Thar."
+        - "&7Allí viven los chamanes que guían a nuestro pueblo."
+        - "&7Por favor, ve a Uzgul'Thar y averigua qué sucede, por favor, ¡te necesitamos!"
+        time: 5
+    options:
+      option1:
+        text:
+          - "&eEstá bien, iré a Uzgul'Thar."
+        start_conversation: conversation2
+  conversation2:
+    dialogue:
+      dialogue1:
+        text:
+        - "&7Gracias. No hablamos así por costumbre, pero esto es serio."
+        time: 5
+    options:
+      option1:
+        text:
+          - "&eEntendido. Me pongo en marcha. Hasta luego."
+        end_conversation: true
+        # Acciones al finalizar la conversación: ejecutar comandos e iniciar la quest
+        commands:
+          - "player_command: quest start mision6_orco"
+          - "say &a{player} ha aceptado investigar Uzgul'Thar."
+          - "console_command: wps selectWaypoint %player% 48205707-b83e-4087-9560-e68d9801c0d2"
+        start_quest: mision6_orco_uzgulthar
+
+
+
