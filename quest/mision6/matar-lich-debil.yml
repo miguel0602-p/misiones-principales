@@ -18,6 +18,7 @@ display:
   type: "netherite_sword"
 
 rewards:
+  - "lp user {player} permission unset mision6_lich"
   - "mision_principal_admin {player} completar mision6" # Recompensa final de la cadena de misiones principales
 
 options:

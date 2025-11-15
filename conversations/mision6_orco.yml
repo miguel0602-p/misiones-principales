@@ -34,10 +34,11 @@ conversation:
         end_conversation: true
         # Acciones al finalizar la conversación: ejecutar comandos e iniciar la quest
         commands:
-          - "player_command: quest start mision6_orco"
+          - "player_command: quest start ir-santuario-lich"
+          - "console_command: lp user %player% permission set mision6_lich"
           - "say &a{player} ha aceptado investigar Uzgul'Thar."
           - "console_command: wps selectWaypoint %player% 48205707-b83e-4087-9560-e68d9801c0d2"
-        start_quest: mision6_orco_uzgulthar
+
 
 
 
