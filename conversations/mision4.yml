@@ -51,7 +51,6 @@ conversation:
         actions:
         - "player_command: quest start ir-a-skjervik"
         - "console_command: lp user %player% permission set mision4"
-        - "console_command: say &a[Misiones] Has comenzado la misión &fEl Asedio de Skjervik&a."
         - "console_command: wps selectWaypoint 8c7f0ee9-e489-443e-b0c0-7df26134a069"
   conversation3:
     dialogue:
@@ -74,6 +73,5 @@ conversation:
         - "&7           Bien. Ve a la torre y habla con Eldrin. Rápido."
         - "&7           Cuando regreses, habla conmigo de nuevo."
         time: 4
-        actions:
-        - "console_command: say &a[Misiones] Información recibida por Rurik."
+        # actions:
         start_conversation: conversation2

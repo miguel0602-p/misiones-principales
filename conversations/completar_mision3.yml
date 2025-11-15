@@ -35,9 +35,7 @@ conversation:
         time: 4
         actions:
         - "console_command: mision_principal_admin %player% completar completar_mision3"
-        - "console_command: say  &7Has informado a Rurik sobre el Sello Roto."
         - "console_command: lp user %player% permission unset mision3"
-        - "console_command: say &a[Misiones] Has completado la misión &fMisión 3&a."
         start_conversation: conversation2
   conversation2:
     dialogue:

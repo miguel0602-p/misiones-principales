@@ -58,7 +58,6 @@ conversation:
                 actions:
                 - "player_command: quest start sello-roto"
                 - "console_command: lp user %player% permission set mision3"
-                - "console_command: say &a[Misiones] Has comenzado la misión &fEl Sello Roto&a."
                 start_conversation: conversation4
 
     conversation3:
@@ -75,7 +74,6 @@ conversation:
                 actions:
                 - "player_command: quest start sello-roto"
                 - "console_command: lp user %player% permission set mision3"
-                - "console_command: say &a[Misiones] Has comenzado la misión &fEl Sello Roto&a."
                 - "console_command: wps selectWaypoint %player% f587b0ac-0c91-4edd-9b67-063002751a4b"
                 start_conversation: conversation4
 

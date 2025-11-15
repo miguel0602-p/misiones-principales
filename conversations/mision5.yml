@@ -30,7 +30,6 @@ conversation:
         actions:
         - "player_command: quest start ir-cueva-cristal"
         - "console_command: lp user %player% permission set mision5"
-        - "console_command: say &a[Misiones] Has comenzado la misión &fEl Rastro Olvidado&a."
         - "console_command: wps selectWaypoint %player% cb305777-f8a7-4df1-b3f4-cd54be92af61"
   conversation3:
     dialogue:

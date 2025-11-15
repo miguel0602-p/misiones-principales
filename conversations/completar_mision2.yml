@@ -38,13 +38,10 @@ conversation:
             - "&7             Y que los dioses protejan tu alma."
             time: 4
             actions:
-            - "console_command: say final"
             - "console_command: quest complete volver-a-rurik-mision-2"
             - "console_command: lp user %player% permission unset mision2"
             - "console_command: lp user %player% permission unset interactions.start.einar_mision2"
             - "console_command: mision_principal_admin %player% completar completar_mision2"
-            - "console_command: say &a[Misiones] Has completado la misión &fMisión 2&a."
-            - "console_command: say &7La carta que encontraste tiene símbolos que el mago no reconoce; debemos consultar a Eldrin Nieblaazul."
             start_conversation: conversation2
 
   conversation2:

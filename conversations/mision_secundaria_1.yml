@@ -61,7 +61,6 @@ conversation:
         actions:
         - 'player_command: quest start ir-campamento1'
         - "console_command: lp user %player% permission set mision1"
-        - "console_command: say &a[Misiones] Has comenzado la misión &fMisión 1&a."
         - "console_command: wps selectWaypoint %player% 2118ecc5-dcca-4c0d-a9b0-c05105f96d76"
          
         start_conversation: conversation7

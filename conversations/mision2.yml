@@ -60,7 +60,6 @@ conversation:
                 actions:
                 - "player_command: quest start ir-a-salvar"
                 - "console_command: lp user %player% permission set mision2"
-                - "console_command: say &a[Misiones] Has comenzado la misión &fMisión 2&a."
                 start_conversation: conversation13
 
     conversation12:
@@ -76,7 +75,6 @@ conversation:
                 - "player_command: quest start ir-a-salvar"
                 - "console_command: lp user %player% permission set mision2" 
                 - "console_command: lp user %player% permission set interactions.start.einar_mision2"
-                - "console_command: say &a[Misiones] Has comenzado la misión &fMisión 2&a."
                 - "console_command: wps selectWaypoint %player% 7bb77d68-c918-457c-9555-8a875ccdf006"
                 start_conversation: conversation13
 
