@@ -27,11 +27,7 @@ conversation:
         text:
         - "&7Gracias. No hablamos así por costumbre, pero esto es serio."
         time: 5
-    options:
-      option1:
-        text:
-          - "&eEntendido. Me pongo en marcha. Hasta luego."
-        end_conversation: true
+    
         # Acciones al finalizar la conversación: ejecutar comandos e iniciar la quest
         commands:
           - "player_command: quest start ir-santuario-lich"
