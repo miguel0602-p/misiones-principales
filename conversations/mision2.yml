@@ -1,6 +1,6 @@
 starts_with:
 - NPC with id 17 # TODO: cambia si es distinto
-name: "&a&lCapitán Rurik"
+name: "         ☣          &a&lCapitán Rurik"
 start_conversation_radius: 5
 end_conversation_radius: 5
 can_be_started_on_air: true
@@ -13,19 +13,32 @@ conversation:
                 requires:
                 - "%interactions_has_completed_quest_sombras_eldrasheim% == true"
                 text:
-                - "&7Buen trabajo, &f%player%&7. Pero temo que no hay descanso aún."
-                - "&7Nuestro mensajero, &eEinar&7, no regresó del paso norte. Algo en su regreso nos inquieta."
+                - '&7'         ## Hay sombras que se estiran desde las montañas...  (comentario para saber el tamaño del chat xd)
+                - '&7'
+                - "&7             Buen trabajo, &f%player%&7. Pero temo que"
+                - "&7             no hay descanso aún."
+                - "&7             Nuestro mensajero, &eEinar&7, no regresó del"
+                - "&7             paso norte. Tememos que algo le haya pasado."
                 time: 4
             dialogue2:
                 text:
-                - "&7Llevaba una carta de tregua para los orcos. Si ha caído, la guerra será inevitable."
-                - "&7Busca su rastro en el Bosque Helado: algunos testigos mencionan huellas que se dirigen hacia las montañas, donde han abierto excavaciones."
-                - "&7Ten cuidado: escuchas de los testigos hablan de chamanes orcos entonando extrañas invocaciones."
+                - '&7'
+                - '&7'
+                - "&7             Llevaba una carta de tregua para los orcos."
+                - "&7             Si ha caído, la guerra será inevitable."
+                - "&7             Busca su rastro en el Bosque Helado:"
+                - "&7             Algunos testigos mencionan que se dirigía"
+                - "&7             hacia las montañas, donde abrieron excavaciones."
+                - "&7             Pero cuidado, tambien mencionaron de chamanes"
+                - "&7             orcos entonando extrañas invocaciones."
                 time: 4
             dialogue3:
                 text:
-                - "&7Busca en el &bBosque Helado&7, más allá del río. Y cuidado..."
-                - "&7Hay rumores de sombras moviéndose entre los árboles."
+                - '&7'
+                - '&7'
+                - "&7             Busca en el &bBosque Helado&7, más allá del río."
+                - "&7             Y cuidado..."
+                - "&7             Hay rumores de sombras moviéndose en los árboles."
                 time: 4
         options:
             option1:
@@ -39,7 +52,10 @@ conversation:
         dialogue:
             dialogue1:
                 text:
-                - "&7Buena suerte, &f%player%&7. Que la luz del Alba te guíe."
+                - '&7'
+                - '&7'
+                - "&7             Buena suerte, &f%player%&7."
+                - "&7             Que la luz del Alba te guíe."
                 time: 2
                 actions:
                 - "player_command: quest start ir-a-salvar"
@@ -51,7 +67,10 @@ conversation:
         dialogue:
             dialogue1:
                 text:
-                - "&7Entonces tráeme su cuerpo o su carta. Cualquiera de los dos valdrá para la verdad."
+                - '&7'
+                - '&7'
+                - "&7             Entonces tráeme su cuerpo o su carta."
+                - "&7             Cualquiera de los dos valdrá para la verdad."
                 time: 3
                 actions:
                 - "player_command: quest start ir-a-salvar"
@@ -65,7 +84,11 @@ conversation:
         dialogue:
             dialogue1:
                 text:
-                - "&7El paso está lleno de carroña y emboscadas. Ve preparado."
-                - "&7Si sigues las huellas hacia las montañas, busca excavaciones y campamentos recientes."
-                - "&7Y recuerda... no todos los enemigos sangran. Algunos susurran y manipulan desde las sombras."
+                - '&7'
+                - '&7'
+                - "&7             El paso está lleno de carroña y emboscadas."
+                - "&7             Ve preparado. Si sigues las huellas hacia las "
+                - "&7             montañas, busca excavaciones y campamentos recientes."
+                - "&7             Y recuerda... no todos los enemigos sangran."
+                - "&7             Algunos susurran y manipulan desde las sombras."
                 time: 3
