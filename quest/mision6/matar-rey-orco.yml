@@ -18,7 +18,7 @@ display:
   type: "netherite_sword"
 
 rewards:
-  - "quest admin moddata start {player} ir-santuario-lich"
+  - "quest admin moddata start {player} explora-orco"
 
 options:
   category: "misiones_principales"
