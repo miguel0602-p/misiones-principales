@@ -1,4 +1,4 @@
-name: '&a&lCapitán Rurik'
+name: '         ☣          &a&lCapitán Rurik'
 starts_with:
 - NPC with id 17
 block_movement: false
@@ -15,20 +15,27 @@ conversation:
             requires:
             - "%interactions_has_completed_quest_mensajero_perdido% == true"
             text:
-            - "&7...Así que Einar está muerto."
-            - "&7Dices que atacaron desde las montañas"
-            - "&7y que murmuraban cosas sobre el Lich y Nyxarath."
-            - "&7Parece que los orcos no están solos en esto."
+            - '&7'         ## Hay sombras que se estiran desde las montañas...  (comentario para saber el tamaño del chat xd)
+            - '&7'
+            - "&7             ...Así que Einar está muerto. Espera..."
+            - "&7             ¡¿Dices que atacaron desde las montañas y que"
+            - "&7             murmuraban cosas sobre el Lich y Nyxarath?!"
+            - "&7             Parece que los orcos no están solos en esto.."
             time: 4
         dialogue2:
             text:
-            - "&7Esto cambia todo, &f%player%&7."
-            - "&7Si hay otra fuerza en juego... debemos descubrir qué la mueve."
+            - '&7'
+            - '&7'
+            - "&7             Esto cambia todo, &f%player%&7."
+            - "&7             Si hay otra fuerza en juego..."
+            - "&7             debemos descubrir qué la mueve."
             time: 4
         dialogue3:
             text:
-            - "&7Quédate cerca. Pronto habrá más trabajo para ti."
-            - "&7Y que los dioses protejan su alma."
+            - '&7'
+            - '&7'
+            - "&7             Quédate cerca. Pronto habrá más trabajo para ti."
+            - "&7             Y que los dioses protejan tu alma."
             time: 4
             actions:
             - "console_command: say final"
@@ -44,5 +51,8 @@ conversation:
       dialogue:
           dialogue1:
               text:
-              - "&7Descansemos esta noche... mañana empezará la verdadera guerra."
+              - '&7'
+              - '&7'
+              - "&7           Descansemos esta noche..."
+              - "&7           Mañana empezará la verdadera guerra."
               time: 3
